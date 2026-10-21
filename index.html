@@ -157,6 +157,11 @@ label.chk input{width:22px;height:22px;flex:none;margin:0}
 .stamps i.gift{border-radius:6px;opacity:.9;border-style:dashed}
 .loyadm{font-size:.9rem}
 button.mini{font:inherit;padding:10px 14px;min-height:44px;border-radius:10px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.btn3[hidden],.acts[hidden]{display:none}
+.fit{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px solid rgba(0,0,0,.12)}
+.fit small{opacity:.75}
+#find h3{margin:18px 0 4px;font-size:1rem}
+button.btn3{background:transparent;cursor:pointer}
 
 </style>
 </head>
@@ -172,11 +177,12 @@ button.mini{font:inherit;padding:10px 14px;min-height:44px;border-radius:10px;bo
 <div><b data-i="lTel">Teléfono</b><a href="tel:+34944372889" data-tel>944 37 28 89</a></div>
 <div><b data-i="lHours">Horario</b><span data-i="hours">Lunes a viernes, 9:00 a 21:00<br>Sábados, 9:00 a 15:00<br>Domingos cerrado</span></div>
 </div>
-<div class="heroacts"><button class="btn" id="cta" data-i="cta">Reservar cita</button><a class="btn3" href="tel:+34944372889" data-tel data-i="call">Llamar</a><a class="btn3" href="#" target="_blank" rel="noopener" data-maps data-i="how">Cómo llegar</a></div>
+<div class="heroacts"><button class="btn" id="cta" data-i="cta">Reservar cita</button><button class="btn3" id="mycita" type="button" data-i="myBtn" hidden>Mis citas</button><a class="btn3" href="tel:+34944372889" data-tel data-i="call">Llamar</a><a class="btn3" href="#" target="_blank" rel="noopener" data-maps data-i="how">Cómo llegar</a></div>
 </div></header>
 <main>
 <div class="card" id="reservar">
 <p class="note" id="note" role="status" hidden></p>
+<div id="find" class="ok" hidden></div>
 <div id="mine" class="ok" hidden></div>
 <div id="rev" class="ok" hidden></div>
 <div id="app">
@@ -224,6 +230,7 @@ nif:"",   // NIF/CIF del titular: si lo rellenas, aparece en la política de pri
 // Servicios, barberos y horarios: deben ser IGUALES que en Code.gs
 services:[{n:"Corte de pelo",eu:"Ile-mozketa",min:30,p:20,ps:17},{n:"Pelo y barba",eu:"Ilea eta bizarra",min:45,p:25,ps:22},{n:"Corte y cejas",eu:"Ile-mozketa eta bekainak",min:30,p:23,ps:20},{n:"Arreglo de barba",eu:"Bizar-moldaketa",min:30,p:12,ps:10},{n:"Afeitado clásico",eu:"Bizar-kentze klasikoa",min:30,p:15,ps:13},{n:"Corte niño (hasta 12 años)",eu:"Haurren ile-mozketa (12 urte arte)",min:30,p:14,ps:14}],
 // Tarjeta de fidelidad (igual que LOYALTY_* en Code.gs). every:0 = sin tarjeta
+cancelHours:24, // igual que CANCEL_HOURS en Code.gs
 loyalty:{every:10,es:"un corte a mitad de precio, o cejas o barba incluidas con tu corte (a elegir)",eu:"ile-mozketa erdi prezioan, edo bekainak edo bizarra ile-mozketarekin barne (aukeran)"},
 pros:["Cualquier barbero","Peña","Yeray","Ashok","Joel","Josu"],
 open:9,close:21,closeSat:15,days:14,lead:30,
@@ -280,7 +287,10 @@ pm:"<p><b>Responsable:</b> %1%2. %3. Tel. %4.</p><p><b>Qué datos recogemos:</b>
 close:"Cerrar",
 promo:"Quiero recibir ofertas y novedades de la barbería por email (opcional)",promoNoMail:"Para recibir ofertas, escribe tu email.",
 loyOn:"Tarjeta de fidelidad: visita %1 de %2. La visita %2 tiene premio: %3.",loyHit:"¡Esta visita tiene premio! Puedes elegir: %1.",loyAria:"%1 visitas de %2",
-loyNote:"Tarjeta de fidelidad: cada visita nº %1 tiene premio: %2."
+loyNote:"Tarjeta de fidelidad: cada visita nº %1 tiene premio: %2.",
+myBtn:"Mis citas",findTitle:"Busca tu cita",findHelp:"Escribe el teléfono y el nombre con los que reservaste. Así puedes ver, cambiar o anular tu cita aunque hayas cerrado la página.",findGo:"Buscar",finding:"Buscando…",findClose:"Cerrar",
+findNone:"No encontramos ninguna cita con esos datos. Revisa el teléfono y el nombre, o llámanos al ",findWait:"Demasiados intentos. Prueba en 10 minutos o llámanos al ",findErr:"No hemos podido buscar. Inténtalo de nuevo.",findPick:"Tus citas pendientes",findOpen:"Ver",
+late:"Faltan menos de %1 horas: para cambiar o anular esta cita, llámanos al ",lateErr:"Faltan menos de %1 horas, ya no se puede hacer online. Llámanos al "
 },
 eu:{
 pageTitle:"Hartu zure hitzordua · La Barbería de Peña",
@@ -325,7 +335,10 @@ pm:"<p><b>Arduraduna:</b> %1%2. %3. Tel. %4.</p><p><b>Zer datu biltzen ditugu:</
 close:"Itxi",
 promo:"Barbertegiaren eskaintzak eta berriak posta elektronikoz jaso nahi ditut (aukerakoa)",promoNoMail:"Eskaintzak jasotzeko, idatzi zure posta elektronikoa.",
 loyOn:"Fidelitate-txartela: %1/%2 bisita. %2. bisitak saria du: %3.",loyHit:"Bisita honek saria du! Aukeratu dezakezu: %1.",loyAria:"%1/%2 bisita",
-loyNote:"Fidelitate-txartela: %1. bisita bakoitzak saria du: %2."
+loyNote:"Fidelitate-txartela: %1. bisita bakoitzak saria du: %2.",
+myBtn:"Nire hitzorduak",findTitle:"Bilatu zure hitzordua",findHelp:"Idatzi erreserbatzean erabili zenituen telefonoa eta izena. Horrela zure hitzordua ikusi, aldatu edo bertan behera utzi dezakezu, orria itxi baduzu ere.",findGo:"Bilatu",finding:"Bilatzen…",findClose:"Itxi",
+findNone:"Ez dugu daturik horrekin hitzordurik aurkitu. Egiaztatu telefonoa eta izena, edo deitu iezaguzu: ",findWait:"Saiakera gehiegi. Saiatu 10 minutu barru edo deitu iezaguzu: ",findErr:"Ezin izan dugu bilatu. Saiatu berriro.",findPick:"Zure hitzordu zain daudenak",findOpen:"Ikusi",
+late:"%1 ordu baino gutxiago falta dira: hitzordu hau aldatzeko edo bertan behera uzteko, deitu iezaguzu: ",lateErr:"%1 ordu baino gutxiago falta dira, ezin da jada online egin. Deitu iezaguzu: "
 }};
 function t(k,a,b,c,d){var v=TX[LANG][k];if(v==null)v=TX.es[k];return String(v).replace(/%1/g,a==null?"":a).replace(/%2/g,b==null?"":b).replace(/%3/g,c==null?"":c).replace(/%4/g,d==null?"":d)}
 
@@ -535,9 +548,11 @@ function mine(msg){
  var s=CFG.services[cur.s],d=dates[di()];
  box.hidden=false;
  box.innerHTML="<div class=\"tick\" aria-hidden=\"true\">✓</div><h2>"+(msg||t("mineTitle"))+"</h2><p class=\"who\">"+t("attends")+" <b>"+esc(CFG.pros[cur.p])+"</b></p><p>"+esc(sname(s))+" · "+eur(cur.stu?s.ps:s.p)+"<br>"+dline(d,cur.t)+"</p>"+(LIVE&&cur.em?"<p>"+t("emailNote","<b>"+esc(cur.em)+"</b>")+"</p>":"")+"<p>"+t("see",esc(CFG.address),esc(CFG.phone))+"</p>"+loyHtml(cur.lo)+"<div class=\"acts\" id=\"a1\"></div><div class=\"acts\" id=\"a2\"></div>";
+ if(LIVE&&cur.lt){var ln=mk("p","note",t("late",CFG.cancelHours)+CFG.phone+".");$("a1").parentNode.insertBefore(ln,$("a1"));$("a1").hidden=true}
+ else{
  var c=mk("button","btn2",t("change"));c.onclick=startEdit;
  var x=mk("button","btn2 danger",t("cancel"));x.onclick=askCancel;
- $("a1").appendChild(c);$("a1").appendChild(x);
+ $("a1").appendChild(c);$("a1").appendChild(x)}
  var ics=mk("button","btn2",t("calIcs"));ics.onclick=function(){downloadIcs(cur)};
  var g=mk("a","btn2",t("calG"));g.href=gcalUrl(cur);g.target="_blank";g.rel="noopener";
  var mp=mk("a","btn2",t("how"));mp.href=MAPS;mp.target="_blank";mp.rel="noopener";
@@ -574,6 +589,7 @@ function askCancel(){
   y.disabled=true;y.textContent=t("cancelling");
   call({action:"cancel",id:cur.id,token:cur.token}).then(function(r){
    if(r.ok||r.code==="notfound")cancelled(box);
+   else if(r.code==="late"){y.disabled=false;y.textContent=t("yesCancel");$("cerr").textContent=t("lateErr",CFG.cancelHours)+CFG.phone+".";if(cur)cur.lt=true;save(cur)}
    else throw new Error("api");
   }).catch(function(){
    y.disabled=false;y.textContent=t("yesCancel");
@@ -583,6 +599,45 @@ function askCancel(){
  var n=mk("button","btn2",t("noKeep"));n.onclick=function(){mine()};
  a.appendChild(y);a.appendChild(n);
 }
+/* «Mis citas»: buscar la cita por teléfono + nombre (por si se cerró la página o se cambió de móvil) */
+(function(){
+ var btn=$("mycita"),box=$("find");if(!btn||!LIVE)return;
+ btn.hidden=false;
+ function draw(msg,items){
+  box.innerHTML="<h2>"+t("findTitle")+"</h2><p>"+t("findHelp")+"</p><label>"+t("lName")+"<input type=\"text\" id=\"fn\" autocomplete=\"given-name\"></label><label>"+t("lPhone")+"<input type=\"tel\" id=\"fp\" autocomplete=\"tel\"></label><p class=\"err\" id=\"ferr\" role=\"alert\">"+(msg||"")+"</p><div class=\"acts\"><button class=\"btn\" id=\"fgo\" type=\"button\">"+t("findGo")+"</button><button class=\"btn2\" id=\"fx\" type=\"button\">"+t("findClose")+"</button></div><div id=\"fres\"></div>";
+  $("fx").onclick=function(){box.hidden=true;box.innerHTML=""};
+  $("fgo").onclick=go;
+  [$("fn"),$("fp")].forEach(function(e){e.onkeydown=function(ev){if(ev.key==="Enter"){ev.preventDefault();go()}}});
+ }
+ function go(){
+  var n=$("fn").value.trim(),p=$("fp").value.replace(/\s/g,""),e=$("ferr"),g=$("fgo");
+  e.textContent="";
+  if(n.length<2||!/^\+?\d{9,13}$/.test(p)){e.textContent=t("findNone")+CFG.phone+".";return}
+  g.disabled=true;g.textContent=t("finding");
+  call({action:"lookup",n:n,ph:p}).then(function(r){
+   g.disabled=false;g.textContent=t("findGo");
+   if(!r.ok){e.textContent=(r.code==="wait"?t("findWait"):t("findNone"))+CFG.phone+".";return}
+   var h="<h3>"+t("findPick")+"</h3>";
+   r.items.forEach(function(it,i){
+    var d=null;for(var k=0;k<dates.length;k++)if(dates[k].key===it.d)d=dates[k];
+    var sv=it.s>=0?CFG.services[it.s]:null;
+    h+="<div class=\"fit\"><span>"+(d?dline(d,it.t):esc(it.d))+"<br><small>"+(sv?esc(sname(sv))+" · ":"")+esc(CFG.pros[it.p])+"</small></span><button class=\"btn2\" type=\"button\" data-i2=\""+i+"\">"+t("findOpen")+"</button></div>";
+   });
+   $("fres").innerHTML=h;
+   [].forEach.call($("fres").querySelectorAll("[data-i2]"),function(b){b.onclick=function(){
+    var it=r.items[+b.getAttribute("data-i2")];
+    sync(it.id,it.token,false).then(function(){
+     if(!cur||cur.id!==it.id){e.textContent=t("findErr");return}
+     box.hidden=true;box.innerHTML="";$("app").hidden=true;mine();$("mine").scrollIntoView({behavior:"smooth",block:"start"});
+    });
+   }});
+  }).catch(function(){g.disabled=false;g.textContent=t("findGo");e.textContent=t("findErr")});
+ }
+ btn.onclick=function(){
+  if(!box.hidden){box.hidden=true;box.innerHTML="";return}
+  draw();box.hidden=false;$("fn").focus();box.scrollIntoView({behavior:"smooth",block:"start"});
+ };
+})();
 mine();if(cur)$("app").hidden=true;
 
 /* Sincroniza con la hoja: si la barbería movió o canceló la cita, se refleja aquí.
@@ -596,8 +651,8 @@ function sync(id,token,fromLink){
    return;
   }
   if(r.s<0)return;
-  var c={id:id,token:token,s:r.s,p:r.p,d:r.d,t:r.t,n:r.n,ph:r.ph,stu:r.stu,em:r.em,pr:r.pr,lo:r.lo};
-  if(cur&&cur.id===id&&cur.d===c.d&&cur.t===c.t&&cur.p===c.p&&cur.s===c.s&&cur.em===c.em&&cur.pr===c.pr&&JSON.stringify(cur.lo)===JSON.stringify(c.lo))return;
+  var c={id:id,token:token,s:r.s,p:r.p,d:r.d,t:r.t,n:r.n,ph:r.ph,stu:r.stu,em:r.em,pr:r.pr,lo:r.lo,lt:!!r.late};
+  if(cur&&cur.id===id&&cur.d===c.d&&cur.t===c.t&&cur.p===c.p&&cur.s===c.s&&cur.em===c.em&&cur.pr===c.pr&&cur.lt===c.lt&&JSON.stringify(cur.lo)===JSON.stringify(c.lo))return;
   cur=c;save(cur);mine();$("app").hidden=!!cur;
  }).catch(function(){});
 }
@@ -671,6 +726,7 @@ $("go").onclick=function(){
    st.t=null;sum();refresh();$("s3").scrollIntoView({behavior:"smooth",block:"nearest"});return;
   }
   if(r.code==="limit"){fail(t("limit")+CFG.phone+".");return}
+  if(r.code==="late"){fail(t("lateErr",CFG.cancelHours)+CFG.phone+".");return}
   if(r.code==="email"){fail(t("emailErr"));return}
   if(r.code==="notfound"){cur=null;save(null);st.edit=false;fail(t("gone"));mine();$("ttl").textContent=t("title");$("go").textContent=t("go");$("keep").hidden=true;return}
   fail(t("saveErr")+CFG.phone+".");
