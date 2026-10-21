@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head><meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DEMO · Reserva tu cita · La Barbería de Peña</title>
+<title>Reserva tu cita · La Barbería de Peña</title>
 <meta name="description" content="Reserva tu cita en La Barbería de Peña, barbería y peluquería masculina en San Vicente de Barakaldo, desde 1964. Sin llamar.">
-<meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#121010">
 <meta property="og:type" content="website">
 <meta property="og:title" content="La Barbería de Peña · Reserva tu cita">
@@ -147,908 +146,21 @@ table.ag td,table.ag td button{height:44px}
 .dscr{overflow-x:auto}table.ct{border-collapse:collapse;width:100%;font-size:14px}table.ct th,table.ct td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
 table.ag td.bk.ns{background:repeating-linear-gradient(-45deg,var(--tint) 0 6px,var(--surface) 6px 12px);color:var(--err)}
 .bar b{text-align:right;white-space:nowrap}
+label.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:12px 0;line-height:1.35}
+label.chk input{width:22px;height:22px;flex:none;margin:0}
+.loynote{margin:14px 0 0;padding:10px 12px;border-radius:10px;background:rgba(200,160,60,.12);font-size:.92rem}
+.loy{margin:14px 0;padding:12px;border-radius:12px;background:rgba(200,160,60,.12)}
+.loy p{margin:8px 0 0;font-size:.92rem}
+.stamps{display:flex;flex-wrap:wrap;gap:6px}
+.stamps i{width:20px;height:20px;border-radius:50%;border:2px solid currentColor;opacity:.4;box-sizing:border-box}
+.stamps i.on{background:currentColor;opacity:1}
+.stamps i.gift{border-radius:6px;opacity:.9;border-style:dashed}
+.loyadm{font-size:.9rem}
+button.mini{font:inherit;padding:10px 14px;min-height:44px;border-radius:10px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
 
-
-#dbar{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:center;background:#C9A24B;color:#17140F;padding:8px 14px;font:500 13px "Work Sans",sans-serif;text-align:center}
-#dbar button{background:#17140F;color:#F4EFE3;border:0;border-radius:8px;padding:6px 12px;font:600 13px "Work Sans",sans-serif;cursor:pointer}
-#dbar button:focus-visible,#dpanel button:focus-visible{outline:3px solid #fff;outline-offset:2px}
-#dpanel{position:fixed;z-index:60;top:0;right:0;bottom:0;width:min(780px,100%);background:var(--surface);color:var(--ink);border-left:1px solid var(--line);box-shadow:-10px 0 30px rgba(0,0,0,.25);display:flex;flex-direction:column;font:400 14px/1.45 "Work Sans",sans-serif}
-#dpanel[hidden]{display:none}
-#dpanel .dh{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
-#dpanel .dh button{background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:8px;width:34px;height:34px;font-size:16px;cursor:pointer}
-#dtabs{display:flex;gap:6px;padding:10px 14px;overflow-x:auto;border-bottom:1px solid var(--line)}
-#dtabs button{flex:0 0 auto;background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-radius:8px;padding:7px 11px;font:500 13px "Work Sans",sans-serif;cursor:pointer}
-#dtabs button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
-#dbody{padding:12px 14px 24px;overflow:auto;flex:1}
-#dpanel .dn{color:var(--muted);margin:0 0 10px}
-.dchk{display:flex;gap:8px;align-items:center;font-weight:400;margin:0 0 10px}
-.dscroll{overflow-x:auto}
-#dpanel table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap}
-#dpanel th,#dpanel td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
-#dpanel td:nth-child(3){white-space:normal;min-width:120px}
-#dpanel tr.dim{opacity:.45}
-.dsm{background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:6px;padding:3px 8px;font:500 12px "Work Sans",sans-serif;cursor:pointer}
-.dmail{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 10px;background:var(--bg)}
-.dmail pre{white-space:pre-wrap;word-break:break-word;font:inherit;margin:6px 0 0}
-.dmail a{color:var(--ink)}
-.dmh{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:2px}
-.dl{display:block;font-weight:500;margin:0 0 10px}
-.dl select{display:block;width:100%;margin-top:6px;padding:10px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
-.dacts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
-.dbtn{background:var(--red);color:var(--on-red);border:0;border-radius:8px;padding:10px 14px;font:600 14px "Work Sans",sans-serif;cursor:pointer}
-.dbtn.dred{background:transparent;color:var(--err);border:1.5px solid var(--err)}
-.dok{background:var(--tint);border-radius:8px;padding:10px 12px;margin:10px 0}
-#dpanel hr{border:0;border-top:1px solid var(--line);margin:18px 0 8px}
-@media (max-width:600px){
-#dbar{gap:6px;padding:6px 10px;flex-wrap:nowrap;justify-content:space-between}
-#dbar>span{display:none}
-#dbar button{flex:1 1 0;padding:10px 6px;font-size:13px;min-height:44px}
-#dpanel{width:100%}
-#dpanel .dh button{width:44px;height:44px}
-#dtabs button,.dsm{min-height:40px}
-}
 </style>
 </head>
 <body>
-<div id="dbar"><span><b>DEMOSTRACIÓN</b> · los datos se guardan solo en este navegador · servicios y precios de ejemplo</span><button id="dadm" type="button">Panel</button><button id="dopen" type="button">Herramientas de la demo</button></div>
-<aside id="dpanel" hidden aria-label="Herramientas de la demo"><div class="dh"><b>Herramientas de la demo</b><button id="dclose" type="button" aria-label="Cerrar">✕</button></div>
-<div id="dtabs"><button type="button" data-t="ag" aria-pressed="true">Agenda de la barbería</button><button type="button" data-t="rs">Valoraciones</button><button type="button" data-t="cl">Hoja de clientes</button><button type="button" data-t="em">Emails enviados <span id="dcount"></span></button><button type="button" data-t="sim">Simular y reiniciar</button></div>
-<div id="dbody"></div></aside>
-<script type="text/plain" id="gs-src">/**
- * La Barbería de Peña · backend de reservas (Google Sheets + Apps Script)
- * Pegar en: hoja de Google > Extensiones > Apps Script.
- * IMPORTANTE: servicios, barberos y horarios deben ser IGUALES que en CFG de index.html.
- */
-var CONFIG = {
-  NAME: "La Barbería de Peña",
-  ADDRESS: "Calle Arrandi, 38, San Vicente de Barakaldo",
-  PHONE: "944 37 28 89",
-  WEB_URL: "",                   // dirección pública de la web (para los enlaces de los emails). Ej: "https://labarberiadepena.netlify.app/"
-  OWNER_EMAIL: "",               // email donde quieres recibir los avisos (vacío = sin avisos)
-  ADMIN_KEY: "",                 // clave del panel de la barbería (mínimo 8 caracteres). Vacía = panel desactivado
-  TZ: "Europe/Madrid",
-  SHEET: "Citas",
-  REVIEWS_SHEET: "Valoraciones",
-  SERVICES: [
-    { n: "Corte de pelo", eu: "Ile-mozketa", min: 30, p: 20, ps: 17 },
-    { n: "Pelo y barba", eu: "Ilea eta bizarra", min: 45, p: 25, ps: 22 }
-  ],
-  PROS: ["Cualquier barbero", "Peña", "Yeray", "Ashok", "Joel", "Josu"], // el 0 es "cualquiera"
-  OPEN: 9, CLOSE: 21, CLOSE_SAT: 15,   // domingo cerrado
-  MAX_DAYS: 21,                         // hasta cuántos días vista se acepta una cita
-  LEAD_MIN: 30,                         // minutos mínimos de antelación
-  MAX_ACTIVE_PER_PHONE: 2,              // citas pendientes por teléfono (anti-abuso)
-  REMIND_HOUR: 18,                      // recordatorio: el día antes a esta hora
-  REVIEW_HOUR: 10,                      // petición de valoración: el día después a esta hora
-  ALLOW_EARLY_REVIEW: false,            // solo para demos: permite opinar antes de que pase la cita
-  INACTIVE_DAYS: 60,                    // un cliente cuenta como "hace tiempo que no viene" tras estos días
-  CLIENTS_SHEET: "Clientes"             // pestaña que se rellena sola con el resumen de cada cliente
-};
-
-var HEAD = ["id", "creada", "fecha", "hora", "minutos", "servicio", "barbero", "nombre", "telefono", "estudiante", "estado", "token", "email", "recordatorio", "resena", "idioma"];
-var C = { id: 0, created: 1, date: 2, time: 3, mins: 4, service: 5, pro: 6, name: 7, phone: 8, stu: 9, status: 10, token: 11, email: 12, rem: 13, rev: 14, lang: 15 };
-var RHEAD = ["id", "fecha_cita", "barbero", "puntos", "nombre", "creada", "estado"];
-
-/* ---------- Textos de los emails (castellano / euskera) ---------- */
-var TXT = {
-  es: {
-    days: ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
-    months: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
-    hello: "Hola ",
-    confirmed: "Tu cita está confirmada", changed: "Tu cita ha cambiado",
-    remindNote: "Te enviaremos un recordatorio el día antes.",
-    manage: "Para cambiar o cancelar la cita: ", manageCall: "Para cambiar o cancelar, llámanos al ",
-    cal: "Añadir a tu calendario: ",
-    remSubject: "Mañana tienes cita", remBody: "Te recordamos tu cita de mañana:",
-    remNo: "¿No puedes venir? Cambia o cancela aquí: ", remNoCall: "¿No puedes venir? Llámanos al ",
-    revSubject: "¿Qué tal con %s?",
-    revBody: "Gracias por venir. ¿Qué nota le das a %s (de 1 a 5 estrellas)? Son 10 segundos y ayuda a otros clientes a elegir barbero:",
-    canSubject: "Cita cancelada", canBody: "Hemos cancelado tu cita del %s.", canAdmin: "La barbería ha tenido que cancelar tu cita del %s. Disculpa las molestias.",
-    again: "Si quieres otra hora, reserva cuando quieras: ", againCall: "Si quieres otra hora, llámanos al "
-  },
-  eu: {
-    days: ["igandea", "astelehena", "asteartea", "asteazkena", "osteguna", "ostirala", "larunbata"],
-    months: ["urtarrilaren", "otsailaren", "martxoaren", "apirilaren", "maiatzaren", "ekainaren", "uztailaren", "abuztuaren", "irailaren", "urriaren", "azaroaren", "abenduaren"],
-    hello: "Kaixo ",
-    confirmed: "Zure hitzordua baieztatuta dago", changed: "Zure hitzordua aldatu da",
-    remindNote: "Bezperan gogorarazpen bat bidaliko dizugu.",
-    manage: "Hitzordua aldatu edo bertan behera uzteko: ", manageCall: "Hitzordua aldatu edo bertan behera uzteko, deitu iezaguzu: ",
-    cal: "Gehitu zure egutegira: ",
-    remSubject: "Bihar hitzordua duzu", remBody: "Zure biharko hitzordua gogoratzen dizugu:",
-    remNo: "Ezin duzu etorri? Aldatu edo bertan behera utzi hemen: ", remNoCall: "Ezin duzu etorri? Deitu iezaguzu: ",
-    revSubject: "Baloratu zure bisita (%s)",
-    revBody: "Eskerrik asko etortzeagatik. Zer nota ematen diozu zure barberoari, %s (1etik 5era, izarretan)? 10 segundo dira eta beste bezeroei barberoa aukeratzen laguntzen die:",
-    canSubject: "Hitzordua bertan behera utzi da", canBody: "Zure hitzordua bertan behera utzi dugu (%s).", canAdmin: "Barbertegiak zure hitzordua bertan behera utzi behar izan du (%s). Barkatu eragozpenak.",
-    again: "Beste ordu bat nahi baduzu, erreserbatu nahi duzunean: ", againCall: "Beste ordu bat nahi baduzu, deitu iezaguzu: "
-  }
-};
-function T(lang, k) { return (TXT[lang] || TXT.es)[k]; }
-function svName(s, lang) { var sv = CONFIG.SERVICES[s]; return lang === "eu" && sv.eu ? sv.eu : sv.n; }
-
-/* ---------- Ejecutar UNA vez a mano ---------- */
-function setup() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var sh = ss.getSheetByName(CONFIG.SHEET) || ss.insertSheet(CONFIG.SHEET);
-  sh.getRange(1, 1, 1, HEAD.length).setValues([HEAD]).setFontWeight("bold");
-  sh.getRange(2, 1, 2000, HEAD.length).setNumberFormat("@"); // todo como texto
-  sh.setFrozenRows(1);
-  var rs = ss.getSheetByName(CONFIG.REVIEWS_SHEET) || ss.insertSheet(CONFIG.REVIEWS_SHEET);
-  rs.getRange(1, 1, 1, RHEAD.length).setValues([RHEAD]).setFontWeight("bold");
-  rs.getRange(2, 1, 2000, RHEAD.length).setNumberFormat("@");
-  rs.setFrozenRows(1);
-  installTriggers();
-  try { actualizarClientes(); } catch (e) {}
-}
-
-function installTriggers() {
-  ScriptApp.getProjectTriggers().forEach(function (t) {
-    var h = t.getHandlerFunction();
-    if (h === "sendReminders" || h === "sendReviewRequests" || h === "actualizarClientes") ScriptApp.deleteTrigger(t);
-  });
-  ScriptApp.newTrigger("sendReminders").timeBased().everyDays(1).atHour(CONFIG.REMIND_HOUR).create();
-  ScriptApp.newTrigger("sendReviewRequests").timeBased().everyDays(1).atHour(CONFIG.REVIEW_HOUR).create();
-  ScriptApp.newTrigger("actualizarClientes").timeBased().everyDays(1).atHour(6).create();
-}
-
-/* ---------- Web app ---------- */
-function doGet(e) {
-  var p = (e && e.parameter) || {};
-  try {
-    if (p.action === "busy") return out(busy(p.from, p.to));
-    if (p.action === "profiles") return out(profiles());
-    return out({ ok: true });
-  } catch (err) {
-    return out({ ok: false, code: "error" });
-  }
-}
-
-function doPost(e) {
-  var b;
-  try { b = JSON.parse(e.postData.contents); } catch (err) { return out({ ok: false, code: "error" }); }
-  if (b.hp) return out({ ok: false, code: "error" }); // trampa anti-bots
-  var lock = LockService.getScriptLock();
-  if (!lock.tryLock(20000)) return out({ ok: false, code: "busy" });
-  try {
-    if (String(b.action).indexOf("admin") === 0) {
-      var auth = adminAuth(b);
-      if (auth !== "ok") return out({ ok: false, code: auth });
-      if (b.action === "adminDay") return out(adminDay(b));
-      if (b.action === "adminCancel") return out(adminCancel(b));
-      if (b.action === "adminBlock") return out(adminBlock(b));
-      if (b.action === "adminUnblock") return out(adminUnblock(b));
-      if (b.action === "adminBook") return out(adminBook(b));
-      if (b.action === "adminNoShow") return out(adminNoShow(b));
-      if (b.action === "adminStats") return out(stats());
-      return out({ ok: false, code: "error" });
-    }
-    if (b.action === "book") return out(book(b));
-    if (b.action === "update") return out(update(b));
-    if (b.action === "cancel") return out(cancel(b));
-    if (b.action === "status") return out(status(b));
-    if (b.action === "reviewinfo") return out(reviewInfo(b));
-    if (b.action === "review") return out(review(b));
-    return out({ ok: false, code: "error" });
-  } catch (err) {
-    return out({ ok: false, code: "error" });
-  } finally {
-    lock.releaseLock();
-  }
-}
-
-function out(o) {
-  return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
-}
-
-/* ---------- Hoja ---------- */
-function sheet() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  return ss.getSheetByName(CONFIG.SHEET) || ss.insertSheet(CONFIG.SHEET);
-}
-function reviewsSheet() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  return ss.getSheetByName(CONFIG.REVIEWS_SHEET) || ss.insertSheet(CONFIG.REVIEWS_SHEET);
-}
-
-function dateStr(v) { return v instanceof Date ? Utilities.formatDate(v, CONFIG.TZ, "yyyy-MM-dd") : String(v).trim(); }
-function timeMin(v) {
-  var s = v instanceof Date ? Utilities.formatDate(v, CONFIG.TZ, "HH:mm") : String(v).trim();
-  var m = /^(\d{1,2}):(\d{2})/.exec(s);
-  return m ? (+m[1]) * 60 + (+m[2]) : -1;
-}
-function hhmm(min) { return (min < 600 ? "0" : "") + Math.floor(min / 60) + ":" + (min % 60 < 10 ? "0" : "") + (min % 60); }
-function label(d, t, lang) {
-  var p = d.split("-"), x = TXT[lang] || TXT.es;
-  if (lang === "eu") return x.days[dow(d)] + ", " + x.months[+p[1] - 1] + " " + (+p[2]) + "a · " + hhmm(t);
-  return x.days[dow(d)] + " " + (+p[2]) + " de " + x.months[+p[1] - 1] + " a las " + hhmm(t);
-}
-
-// "Todos" bloquea a todos los barberos (festivos, vacaciones...)
-function proIndex(name) {
-  name = String(name).trim();
-  if (name.toLowerCase() === "todos") return 0;
-  return CONFIG.PROS.indexOf(name) > 0 ? CONFIG.PROS.indexOf(name) : -1;
-}
-
-function rows() {
-  var sh = sheet(), last = sh.getLastRow();
-  if (last < 2) return [];
-  var vals = sh.getRange(2, 1, last - 1, HEAD.length).getValues(), res = [];
-  for (var i = 0; i < vals.length; i++) {
-    var v = vals[i];
-    if (!v[C.id] && !v[C.date]) continue;
-    res.push({
-      row: i + 2, id: String(v[C.id]), d: dateStr(v[C.date]), t: timeMin(v[C.time]),
-      m: Number(v[C.mins]) || 30, p: proIndex(v[C.pro]), ph: String(v[C.phone]).trim(),
-      st: String(v[C.status]).trim().toLowerCase(), active: String(v[C.status]).trim().toLowerCase() === "activa", token: String(v[C.token]),
-      em: String(v[C.email]).trim(), rem: String(v[C.rem]).trim(), rev: String(v[C.rev]).trim(),
-      lang: String(v[C.lang]).trim() === "eu" ? "eu" : "es", raw: v
-    });
-  }
-  return res;
-}
-
-/* ---------- Lectura pública ---------- */
-// Solo horas ocupadas, sin datos personales
-function busy(from, to) {
-  var re = /^\d{4}-\d{2}-\d{2}$/;
-  if (!re.test(from) || !re.test(to)) return { ok: false, code: "error" };
-  var list = [];
-  rows().forEach(function (r) {
-    if (r.active && r.t >= 0 && r.p >= 0 && r.d >= from && r.d <= to) list.push({ i: r.id, d: r.d, t: r.t, m: r.m, p: r.p });
-  });
-  return { ok: true, busy: list };
-}
-
-// Nota media (1-5) y número de valoraciones publicadas de cada barbero
-function profiles() {
-  var sh = reviewsSheet(), last = sh.getLastRow(), per = [];
-  for (var k = 0; k < CONFIG.PROS.length; k++) per.push(k === 0 ? null : { sum: 0, n: 0 });
-  if (last >= 2) {
-    var vals = sh.getRange(2, 1, last - 1, RHEAD.length).getValues();
-    for (var i = 0; i < vals.length; i++) {
-      var v = vals[i], p = proIndex(v[2]), r = Number(v[3]);
-      if (p < 1 || !(r >= 1 && r <= 5) || String(v[6]).trim().toLowerCase() !== "publicada") continue;
-      per[p].sum += r; per[p].n++;
-    }
-  }
-  return {
-    ok: true,
-    profiles: per.map(function (x) {
-      if (!x) return null;
-      return { n: x.n, avg: x.n ? Math.round(x.sum / x.n * 10) / 10 : 0 };
-    })
-  };
-}
-
-/* ---------- Validación ---------- */
-function madridNow() {
-  var d = new Date();
-  return {
-    date: Utilities.formatDate(d, CONFIG.TZ, "yyyy-MM-dd"),
-    min: (+Utilities.formatDate(d, CONFIG.TZ, "HH")) * 60 + (+Utilities.formatDate(d, CONFIG.TZ, "mm"))
-  };
-}
-function addDays(ds, n) {
-  var p = ds.split("-"), t = Date.UTC(+p[0], +p[1] - 1, +p[2]) + n * 864e5, x = new Date(t);
-  return x.getUTCFullYear() + "-" + ("0" + (x.getUTCMonth() + 1)).slice(-2) + "-" + ("0" + x.getUTCDate()).slice(-2);
-}
-function dow(ds) { var p = ds.split("-"); return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).getUTCDay(); }
-function noFormula(s) { return s.replace(/^[=+\-@]+/, ""); }
-function firstName(n) { return String(n).split(" ")[0]; }
-
-function clean(b) {
-  var name = noFormula(String(b.n || "").replace(/[\u0000-\u001f<>]/g, "").replace(/\s+/g, " ").trim()).slice(0, 60);
-  var ph = String(b.ph || "").replace(/\s/g, "");
-  var em = noFormula(String(b.em || "").replace(/[\u0000-\u001f<>\s]/g, "").toLowerCase());
-  var s = Number(b.s), p = Number(b.p), t = Number(b.t);
-  if (!(s >= 0 && s < CONFIG.SERVICES.length && s % 1 === 0)) return { err: "error" };
-  if (!(p >= 0 && p < CONFIG.PROS.length && p % 1 === 0)) return { err: "error" };
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(b.d))) return { err: "error" };
-  if (!(t >= 0 && t < 1440 && t % 30 === 0)) return { err: "error" };
-  if (name.length < 2) return { err: "error" };
-  if (!/^\+?\d{9,13}$/.test(ph)) return { err: "error" };
-  if (em && (em.length > 100 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em))) return { err: "email" };
-  return { s: s, p: p, d: String(b.d), t: t, n: name, ph: ph, em: em, stu: b.stu ? "sí" : "no", lang: b.lang === "eu" ? "eu" : "es" };
-}
-
-// adm = true (panel de la barbería): sin antelación mínima ni bloqueo por hora pasada de hoy
-function checkTime(x, adm) {
-  var now = madridNow(), dur = CONFIG.SERVICES[x.s].min;
-  if (x.d < now.date || x.d > addDays(now.date, CONFIG.MAX_DAYS)) return "past";
-  var w = dow(x.d);
-  if (w === 0) return "closed";
-  var close = (w === 6 ? CONFIG.CLOSE_SAT : CONFIG.CLOSE) * 60;
-  if (x.t < CONFIG.OPEN * 60 || x.t + dur > close) return "closed";
-  if (!adm && x.d === now.date && x.t < now.min + CONFIG.LEAD_MIN) return "past";
-  return null;
-}
-
-// Devuelve el barbero libre (el que tenga menos citas ese día si es "cualquiera") o -1
-function pickPro(x, all, selfId) {
-  var dur = CONFIG.SERVICES[x.s].min, end = x.t + dur;
-  function free(p) {
-    return !all.some(function (r) {
-      return r.active && r.id !== selfId && r.d === x.d && r.t >= 0 && (r.p === 0 || r.p === p) && r.t < end && x.t < r.t + r.m;
-    });
-  }
-  if (x.p > 0) return free(x.p) ? x.p : -1;
-  var best = -1, bestN = 1e9;
-  for (var p = 1; p < CONFIG.PROS.length; p++) {
-    if (!free(p)) continue;
-    var n = all.filter(function (r) { return r.active && r.d === x.d && r.p === p; }).length;
-    if (n < bestN) { best = p; bestN = n; }
-  }
-  return best;
-}
-
-/* ---------- Acciones de los clientes ---------- */
-function rowValues(id, created, x, pro, token, rem, rev) {
-  var sv = CONFIG.SERVICES[x.s];
-  return [id, created, x.d, hhmm(x.t), sv.min, sv.n, CONFIG.PROS[pro], x.n, x.ph, x.stu, "activa", token, x.em, rem, rev, x.lang];
-}
-function writeRow(r, vals) {
-  sheet().getRange(r, 1, 1, HEAD.length).setNumberFormat("@").setValues([vals]);
-}
-function stamp() { return Utilities.formatDate(new Date(), CONFIG.TZ, "yyyy-MM-dd HH:mm"); }
-function newToken() { return Utilities.getUuid().replace(/-/g, ""); }
-
-function book(b) {
-  var x = clean(b);
-  if (x.err) return { ok: false, code: x.err };
-  var bad = checkTime(x, false);
-  if (bad) return { ok: false, code: bad };
-  var all = rows();
-
-  // Reintento del mismo cliente (misma hora y teléfono): devolver la cita que ya existe
-  var dur = CONFIG.SERVICES[x.s].min;
-  for (var i = 0; i < all.length; i++) {
-    var r = all[i];
-    if (r.active && r.ph === x.ph && r.d === x.d && r.t === x.t && r.m === dur) {
-      return { ok: true, id: r.id, token: r.token, p: r.p };
-    }
-  }
-  var now = madridNow();
-  var mine = all.filter(function (r) { return r.active && r.ph === x.ph && r.d >= now.date; }).length;
-  if (mine >= CONFIG.MAX_ACTIVE_PER_PHONE) return { ok: false, code: "limit" };
-
-  var pro = pickPro(x, all, null);
-  if (pro < 0) return { ok: false, code: "taken" };
-
-  var id = Utilities.getUuid().slice(0, 8), token = newToken();
-  var sh = sheet();
-  writeRow(Math.max(sh.getLastRow(), 1) + 1, rowValues(id, stamp(), x, pro, token, "", ""));
-  notifyOwner("Cita nueva", x, pro);
-  clientMail(x, pro, id, token, "confirmed");
-  return { ok: true, id: id, token: token, p: pro };
-}
-
-function find(b, all) {
-  for (var i = 0; i < all.length; i++) {
-    if (all[i].id === String(b.id) && all[i].token === String(b.token) && b.token) return all[i];
-  }
-  return null;
-}
-
-function update(b) {
-  var x = clean(b), all = rows(), r = find(b, all);
-  if (!r || !r.active) return { ok: false, code: "notfound" };
-  if (x.err) return { ok: false, code: x.err };
-  var bad = checkTime(x, false);
-  if (bad) return { ok: false, code: bad };
-  var pro = pickPro(x, all, r.id);
-  if (pro < 0) return { ok: false, code: "taken" };
-  // al cambiar la cita se vuelve a mandar recordatorio; la valoración se conserva
-  writeRow(r.row, rowValues(r.id, r.raw[C.created], x, pro, r.token, "", r.rev));
-  notifyOwner("Cita modificada", x, pro);
-  clientMail(x, pro, r.id, r.token, "changed");
-  return { ok: true, id: r.id, token: r.token, p: pro };
-}
-
-function cancel(b) {
-  var r = find(b, rows());
-  if (!r || !r.active) return { ok: false, code: "notfound" };
-  cancelRow(r, false);
-  return { ok: true };
-}
-
-function cancelRow(r, byShop) {
-  sheet().getRange(r.row, C.status + 1).setValue("cancelada");
-  var v = r.raw;
-  mail(CONFIG.OWNER_EMAIL, "Barbería · " + (byShop ? "Cita cancelada desde el panel" : "Cita cancelada"),
-    v[C.service] + " · " + v[C.pro] + " · " + r.d + " " + hhmm(r.t) + " · " + v[C.name] + " (" + v[C.phone] + ")");
-  if (r.em) {
-    var again = CONFIG.WEB_URL ? T(r.lang, "again") + CONFIG.WEB_URL : T(r.lang, "againCall") + CONFIG.PHONE + ".";
-    mail(r.em, CONFIG.NAME + " · " + T(r.lang, "canSubject"),
-      T(r.lang, "hello") + firstName(v[C.name]) + ",\n\n" +
-      T(r.lang, byShop ? "canAdmin" : "canBody").replace("%s", label(r.d, r.t, r.lang)) + "\n" + again + "\n\n" + CONFIG.NAME);
-  }
-}
-
-// Devuelve el estado actual de la cita (el dueño pudo moverla o cancelarla desde la hoja)
-function status(b) {
-  var r = find(b, rows());
-  if (!r || !r.active) return { ok: true, active: false };
-  var v = r.raw, s = -1;
-  CONFIG.SERVICES.forEach(function (sv, i) { if (sv.n === String(v[C.service])) s = i; });
-  return { ok: true, active: true, d: r.d, t: r.t, p: r.p, s: s, n: String(v[C.name]), ph: r.ph, stu: String(v[C.stu]) === "sí", em: r.em };
-}
-
-/* ---------- Valoraciones (solo quien tuvo la cita) ---------- */
-function reviewable(r) {
-  if (CONFIG.ALLOW_EARLY_REVIEW) return true;
-  var now = madridNow();
-  return r.d < now.date || (r.d === now.date && r.t + r.m <= now.min);
-}
-
-function reviewInfo(b) {
-  var r = find(b, rows());
-  if (!r || !r.active || r.p < 1) return { ok: true, can: false, reason: "notfound" };
-  if (r.rev === "hecha") return { ok: true, can: false, reason: "done" };
-  if (!reviewable(r)) return { ok: true, can: false, reason: "early" };
-  var s = -1;
-  CONFIG.SERVICES.forEach(function (sv, i) { if (sv.n === String(r.raw[C.service])) s = i; });
-  return { ok: true, can: true, pro: CONFIG.PROS[r.p], s: s, d: r.d, n: firstName(r.raw[C.name]) };
-}
-
-function review(b) {
-  var info = reviewInfo(b);
-  if (!info.can) return { ok: false, code: info.reason };
-  var r = find(b, rows()), pts = Number(b.r);
-  if (!(pts >= 1 && pts <= 5 && pts % 1 === 0)) return { ok: false, code: "error" };
-  var rs = reviewsSheet();
-  rs.getRange(Math.max(rs.getLastRow(), 1) + 1, 1, 1, RHEAD.length).setNumberFormat("@").setValues([[
-    r.id, r.d, CONFIG.PROS[r.p], String(pts), firstName(r.raw[C.name]), stamp(), "publicada"
-  ]]);
-  sheet().getRange(r.row, C.rev + 1).setValue("hecha");
-  mail(CONFIG.OWNER_EMAIL, "Barbería · Nueva valoración " + pts + "/5", CONFIG.PROS[r.p] + " · " + firstName(r.raw[C.name]) + "\n\n(Para quitarla: pestaña " + CONFIG.REVIEWS_SHEET + ", cambia 'estado' a 'oculta')");
-  return { ok: true };
-}
-
-/* ---------- Panel de la barbería (protegido con ADMIN_KEY) ---------- */
-function adminAuth(b) {
-  var k = String(CONFIG.ADMIN_KEY || "");
-  if (k.length < 8) return "off";
-  var cache = CacheService.getScriptCache(), fails = Number(cache.get("adminFails") || 0);
-  if (fails >= 8) return "locked";
-  if (String(b.key || "") !== k) { cache.put("adminFails", String(fails + 1), 600); return "auth"; }
-  return "ok";
-}
-
-function adminDay(b) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(b.d))) return { ok: false, code: "error" };
-  var list = [];
-  rows().forEach(function (r) {
-    if (!(r.active || r.st === "noshow") || r.d !== b.d || r.t < 0 || r.p < 0) return;
-    var v = r.raw, blk = String(v[C.name]) === "BLOQUEO";
-    list.push({ i: r.id, t: r.t, m: r.m, p: r.p, blk: blk, n: blk ? "" : String(v[C.name]), ph: r.ph, em: r.em, sv: String(v[C.service]), stu: String(v[C.stu]) === "sí", ns: r.st === "noshow" });
-  });
-  return { ok: true, rows: list };
-}
-
-function adminCancel(b) {
-  var all = rows(), r = null;
-  for (var i = 0; i < all.length; i++) if (all[i].id === String(b.id) && all[i].active && String(all[i].raw[C.name]) !== "BLOQUEO") r = all[i];
-  if (!r) return { ok: false, code: "notfound" };
-  cancelRow(r, true);
-  return { ok: true };
-}
-
-function adminBlock(b) {
-  var p = Number(b.p), t = Number(b.t), m = Number(b.m);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(b.d)) || !(p >= 0 && p < CONFIG.PROS.length && p % 1 === 0) ||
-      !(t >= 0 && t < 1440 && t % 30 === 0) || !(m >= 30 && m <= 720 && m % 30 === 0)) return { ok: false, code: "error" };
-  var id = "b" + Utilities.getUuid().slice(0, 7), sh = sheet();
-  writeRow(Math.max(sh.getLastRow(), 1) + 1, [id, stamp(), String(b.d), hhmm(t), m, "", p === 0 ? "Todos" : CONFIG.PROS[p], "BLOQUEO", "", "", "activa", "", "", "", "", "es"]);
-  return { ok: true, id: id };
-}
-
-function adminUnblock(b) {
-  var all = rows();
-  for (var i = 0; i < all.length; i++) {
-    var r = all[i];
-    if (r.id === String(b.id) && r.active && String(r.raw[C.name]) === "BLOQUEO") {
-      sheet().getRange(r.row, C.status + 1).setValue("cancelada");
-      return { ok: true };
-    }
-  }
-  return { ok: false, code: "notfound" };
-}
-
-// Cita tomada por teléfono o en persona
-function adminBook(b) {
-  var x = clean(b);
-  if (x.err) return { ok: false, code: x.err };
-  var bad = checkTime(x, true);
-  if (bad) return { ok: false, code: bad };
-  var pro = pickPro(x, rows(), null);
-  if (pro < 0) return { ok: false, code: "taken" };
-  var id = Utilities.getUuid().slice(0, 8), token = newToken(), sh = sheet();
-  writeRow(Math.max(sh.getLastRow(), 1) + 1, rowValues(id, stamp(), x, pro, token, "", ""));
-  clientMail(x, pro, id, token, "confirmed");
-  return { ok: true, id: id, p: pro };
-}
-
-// Marca (o desmarca) que el cliente no vino. Solo citas ya terminadas.
-function adminNoShow(b) {
-  var all = rows(), r = null, now = madridNow();
-  for (var i = 0; i < all.length; i++) if (all[i].id === String(b.id) && (all[i].active || all[i].st === "noshow") && String(all[i].raw[C.name]) !== "BLOQUEO") r = all[i];
-  if (!r) return { ok: false, code: "notfound" };
-  if (r.st === "noshow") { sheet().getRange(r.row, C.status + 1).setValue("activa"); return { ok: true, ns: false }; }
-  if (!(r.d < now.date || (r.d === now.date && r.t + r.m <= now.min))) return { ok: false, code: "future" };
-  sheet().getRange(r.row, C.status + 1).setValue("noshow");
-  return { ok: true, ns: true };
-}
-
-/* ---------- Clientes y resumen (para tomar decisiones) ---------- */
-function svcIndex(name) { name = String(name).trim(); for (var i = 0; i < CONFIG.SERVICES.length; i++) if (CONFIG.SERVICES[i].n === name) return i; return -1; }
-function dayDiff(a, b) { var x = a.split("-"), y = b.split("-"); return Math.round((Date.UTC(+y[0], +y[1] - 1, +y[2]) - Date.UTC(+x[0], +x[1] - 1, +x[2])) / 864e5); }
-function argmax(o) { var best = "", bv = -1; for (var k in o) if (o[k] > bv) { bv = o[k]; best = k; } return best; }
-
-// Recorre la hoja y agrega por cliente (el teléfono identifica al cliente). Una cita activa ya terminada cuenta como realizada.
-function analyze() {
-  var now = madridNow(), clients = {}, tot = { done: 0, pending: 0, cancel: 0, noshow: 0 };
-  var perPro = [], perDow = [0, 0, 0, 0, 0, 0, 0], perHour = {}, perSvc = [], rev = 0, rev30 = 0, from30 = addDays(now.date, -30), first = "";
-  for (var k = 0; k < CONFIG.PROS.length; k++) perPro.push(0);
-  CONFIG.SERVICES.forEach(function () { perSvc.push({ n: 0, rev: 0 }); });
-  rows().forEach(function (r) {
-    if (String(r.raw[C.name]) === "BLOQUEO" || r.p < 1) return;
-    var past = r.d < now.date || (r.d === now.date && r.t + r.m <= now.min);
-    var kind = r.st === "cancelada" ? "cancel" : r.st === "noshow" ? "noshow" : r.st === "activa" ? (past ? "done" : "pending") : "";
-    if (!kind) return;
-    tot[kind]++;
-    var key = r.ph.replace(/\D/g, "") || ("id" + r.id);
-    var c = clients[key] || (clients[key] = { ph: r.ph, name: "", em: "", done: 0, cancel: 0, noshow: 0, spent: 0, first: "", last: "", next: "", pro: {}, svc: {} });
-    if (!c.name || r.d >= (c.seen || "")) { c.name = String(r.raw[C.name]); c.seen = r.d; }
-    if (r.em) c.em = r.em;
-    var si = svcIndex(r.raw[C.service]), sv = si >= 0 ? CONFIG.SERVICES[si] : null;
-    var price = sv ? (String(r.raw[C.stu]) === "sí" ? sv.ps : sv.p) : 0;
-    if (kind === "done") {
-      c.done++; c.spent += price;
-      if (!c.first || r.d < c.first) c.first = r.d;
-      if (!c.last || r.d > c.last) c.last = r.d;
-      if (!first || r.d < first) first = r.d;
-      c.pro[r.p] = (c.pro[r.p] || 0) + 1; if (si >= 0) c.svc[si] = (c.svc[si] || 0) + 1;
-      perPro[r.p]++; perDow[dow(r.d)]++; var h = Math.floor(r.t / 60); perHour[h] = (perHour[h] || 0) + 1;
-      if (si >= 0) { perSvc[si].n++; perSvc[si].rev += price; }
-      rev += price; if (r.d >= from30) rev30 += price;
-    } else if (kind === "cancel") c.cancel++;
-    else if (kind === "noshow") c.noshow++;
-    else if (!c.next || r.d < c.next) c.next = r.d;
-  });
-  var list = [];
-  for (var key2 in clients) {
-    var c2 = clients[key2];
-    c2.since = c2.last ? dayDiff(c2.last, now.date) : -1;
-    c2.favPro = c2.done ? CONFIG.PROS[+argmax(c2.pro)] : "";
-    c2.favSvc = c2.done && argmax(c2.svc) !== "" ? CONFIG.SERVICES[+argmax(c2.svc)].n : "";
-    list.push(c2);
-  }
-  return { now: now, tot: tot, perPro: perPro, perDow: perDow, perHour: perHour, perSvc: perSvc, rev: rev, rev30: rev30, first: first, list: list };
-}
-
-function stats() {
-  var a = analyze(), prof = profiles().profiles, pick = function (c) { return { n: c.name, ph: c.ph, v: c.done, g: c.spent, l: c.last, s: c.since }; };
-  var seen = a.list.filter(function (c) { return c.done >= 1; });
-  var repeat = seen.filter(function (c) { return c.done >= 2; }).length;
-  var inactive = seen.filter(function (c) { return c.since >= CONFIG.INACTIVE_DAYS && !c.next; }).sort(function (x, y) { return y.since - x.since; });
-  var top = seen.slice().sort(function (x, y) { return y.done - x.done || y.spent - x.spent; }).slice(0, 5);
-  var den = a.tot.done + a.tot.cancel + a.tot.noshow, pros = [], hours = [], dows = [];
-  for (var p = 1; p < CONFIG.PROS.length; p++) pros.push({ n: CONFIG.PROS[p], v: a.perPro[p], avg: prof[p] ? prof[p].avg : 0, rn: prof[p] ? prof[p].n : 0 });
-  for (var h = CONFIG.OPEN; h < CONFIG.CLOSE; h++) hours.push({ h: h, v: a.perHour[h] || 0 });
-  for (var d = 1; d <= 6; d++) dows.push({ d: d, v: a.perDow[d] });
-  return {
-    ok: true, tot: a.tot, rate: den ? Math.round((a.tot.cancel + a.tot.noshow) / den * 100) : 0, rev: a.rev, rev30: a.rev30, since: a.first,
-    pros: pros, hours: hours, dows: dows, svcs: CONFIG.SERVICES.map(function (s, i) { return { n: s.n, v: a.perSvc[i].n, rev: a.perSvc[i].rev }; }),
-    clients: { total: seen.length, repeat: repeat, fresh: seen.length - repeat, inactiveN: inactive.length, inactive: inactive.slice(0, 15).map(pick), top: top.map(pick) },
-    days: CONFIG.INACTIVE_DAYS
-  };
-}
-
-var CHEAD = ["telefono", "nombre", "email", "visitas", "canceladas", "no_vino", "gasto_estimado_eur", "primera_visita", "ultima_visita", "dias_sin_venir", "barbero_habitual", "servicio_habitual", "proxima_cita"];
-// Pestaña "Clientes": una fila por cliente. Se actualiza sola cada día a las 6:00 (o ejecuta esta función a mano).
-function actualizarClientes() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet(), sh = ss.getSheetByName(CONFIG.CLIENTS_SHEET) || ss.insertSheet(CONFIG.CLIENTS_SHEET);
-  var list = analyze().list.sort(function (x, y) { return (y.last || "").localeCompare(x.last || "") || y.done - x.done; });
-  var vals = [CHEAD];
-  list.forEach(function (c) { vals.push([c.ph, c.name, c.em, c.done, c.cancel, c.noshow, c.spent, c.first, c.last, c.since < 0 ? "" : c.since, c.favPro, c.favSvc, c.next]); });
-  sh.clearContents();
-  sh.getRange(1, 1, vals.length, CHEAD.length).setValues(vals);
-  sh.getRange(1, 1, 1, CHEAD.length).setFontWeight("bold");
-  sh.setFrozenRows(1);
-}
-
-/* ---------- Emails ---------- */
-function link(param, id, token) {
-  if (!CONFIG.WEB_URL) return "";
-  return CONFIG.WEB_URL + (CONFIG.WEB_URL.indexOf("?") < 0 ? "?" : "&") + param + "=" + id + "." + token;
-}
-
-// Enlace "Añadir a Google Calendar" (la hora de Madrid se convierte a UTC)
-function gcal(d, t, mins, title) {
-  try {
-    var s = Utilities.parseDate(d + " " + hhmm(t), CONFIG.TZ, "yyyy-MM-dd HH:mm"), e = new Date(s.getTime() + mins * 60000);
-    var z = function (x) { return Utilities.formatDate(x, "UTC", "yyyyMMdd") + "T" + Utilities.formatDate(x, "UTC", "HHmmss") + "Z"; };
-    return "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(title) + "&dates=" + z(s) + "/" + z(e) + "&location=" + encodeURIComponent(CONFIG.ADDRESS);
-  } catch (err) { return ""; }
-}
-
-function clientMail(x, pro, id, token, kind) {
-  if (!x.em) return;
-  var L = x.lang, l = link("cita", id, token), sv = CONFIG.SERVICES[x.s];
-  var cal = gcal(x.d, x.t, sv.min, svName(x.s, L) + " · " + CONFIG.PROS[pro] + " · " + CONFIG.NAME);
-  mail(x.em, CONFIG.NAME + " · " + T(L, kind),
-    T(L, "hello") + firstName(x.n) + ",\n\n" + T(L, kind) + ":\n\n" +
-    svName(x.s, L) + " · " + CONFIG.PROS[pro] + "\n" + label(x.d, x.t, L) + "\n" +
-    CONFIG.ADDRESS + " · Tel. " + CONFIG.PHONE + "\n\n" +
-    T(L, "remindNote") +
-    (cal ? "\n" + T(L, "cal") + cal : "") +
-    (l ? "\n" + T(L, "manage") + l : "\n" + T(L, "manageCall") + CONFIG.PHONE + ".") +
-    "\n\n" + CONFIG.NAME);
-}
-
-function notifyOwner(title, x, pro) {
-  mail(CONFIG.OWNER_EMAIL, "Barbería · " + title,
-    CONFIG.SERVICES[x.s].n + " · " + CONFIG.PROS[pro] + " · " + x.d + " " + hhmm(x.t) + " · " + x.n + " (" + x.ph + ")" + (x.em ? " · " + x.em : ""));
-}
-
-function mail(to, subject, body) {
-  if (!to) return;
-  try { MailApp.sendEmail({ to: to, subject: subject, body: body, name: CONFIG.NAME }); } catch (e) {}
-}
-
-function reminderMail(r) {
-  var L = r.lang, l = link("cita", r.id, r.token), v = r.raw, s = -1;
-  CONFIG.SERVICES.forEach(function (sv, i) { if (sv.n === String(v[C.service])) s = i; });
-  mail(r.em, CONFIG.NAME + " · " + T(L, "remSubject"),
-    T(L, "hello") + firstName(v[C.name]) + ",\n\n" + T(L, "remBody") + "\n\n" +
-    (s >= 0 ? svName(s, L) : v[C.service]) + " · " + v[C.pro] + "\n" + label(r.d, r.t, L) + "\n" +
-    CONFIG.ADDRESS + " · Tel. " + CONFIG.PHONE + "\n\n" +
-    (l ? T(L, "remNo") + l : T(L, "remNoCall") + CONFIG.PHONE + ".") +
-    "\n\n" + CONFIG.NAME);
-}
-
-function reviewMail(r) {
-  var L = r.lang, v = r.raw;
-  mail(r.em, CONFIG.NAME + " · " + T(L, "revSubject").replace("%s", v[C.pro]),
-    T(L, "hello") + firstName(v[C.name]) + ",\n\n" + T(L, "revBody").replace("%s", v[C.pro]) + "\n\n" +
-    link("resena", r.id, r.token) + "\n\n" + CONFIG.NAME);
-}
-
-/* ---------- Tareas programadas (las crea setup / installTriggers) ---------- */
-// Cada día por la tarde: recordatorio de las citas de mañana
-function sendReminders() {
-  var lock = LockService.getScriptLock();
-  if (!lock.tryLock(30000)) return;
-  try {
-    var tom = addDays(madridNow().date, 1), sh = sheet();
-    rows().forEach(function (r) {
-      if (!r.active || r.d !== tom || !r.em || r.rem || r.p < 1) return;
-      if (MailApp.getRemainingDailyQuota() < 1) return;
-      reminderMail(r);
-      sh.getRange(r.row, C.rem + 1).setValue("sí");
-    });
-  } finally { lock.releaseLock(); }
-}
-
-// Cada día por la mañana: pide la valoración de las citas de los últimos 7 días (una sola vez)
-function sendReviewRequests() {
-  if (!CONFIG.WEB_URL) return;
-  var lock = LockService.getScriptLock();
-  if (!lock.tryLock(30000)) return;
-  try {
-    var today = madridNow().date, since = addDays(today, -7), sh = sheet();
-    rows().forEach(function (r) {
-      if (!r.active || !r.em || r.rev || r.p < 1 || r.d >= today || r.d < since) return;
-      if (MailApp.getRemainingDailyQuota() < 1) return;
-      reviewMail(r);
-      sh.getRange(r.row, C.rev + 1).setValue("enviada");
-    });
-  } finally { lock.releaseLock(); }
-}
-</script>
-<script>/* DEMO: ejecuta el mismo Code.gs de producción dentro del navegador, con una hoja simulada en localStorage */
-(function(){
-var K="barberia-demo-v3",PAGE_KEY="barberia-cita-v2";
-var store=null;
-try{store=JSON.parse(localStorage.getItem(K)||"null")}catch(e){store=null}
-var fresh=!store;
-if(!store)store={Citas:[],"Valoraciones":[],"Clientes":[],outbox:[]};
-function persist(){try{localStorage.setItem(K,JSON.stringify(store))}catch(e){}}
-
-function makeSheet(name){
- var data=store[name];
- return{
-  getLastRow:function(){return 1+data.length},
-  setFrozenRows:function(){},
-  clearContents:function(){data.length=0;persist()},
-  getRange:function(r,c,nr,nc){
-   nr=nr||1;nc=nc||1;
-   var rg={
-    getValues:function(){var o=[];for(var i=0;i<nr;i++){var row=data[r-2+i]||[],a=[];for(var j=0;j<nc;j++){var v=row[c-1+j];a.push(v==null?"":v)}o.push(a)}return o},
-    getValue:function(){return rg.getValues()[0][0]},
-    setValues:function(v){for(var i=0;i<v.length;i++){var idx=r-2+i;if(idx<0)continue;data[idx]=data[idx]||[];for(var j=0;j<v[i].length;j++)data[idx][c-1+j]=v[i][j]}persist();return rg},
-    setValue:function(v){return rg.setValues([[v]])},
-    setNumberFormat:function(){return rg},setFontWeight:function(){return rg}
-   };
-   return rg;
-  }
- };
-}
-var sheets={"Citas":makeSheet("Citas"),"Valoraciones":makeSheet("Valoraciones"),"Clientes":makeSheet("Clientes")};
-function fmtD(d,tz,f){
- var p={};
- new Intl.DateTimeFormat("en-GB",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).formatToParts(d).forEach(function(x){p[x.type]=x.value});
- p.hour=("0"+(+p.hour%24)).slice(-2);
- return f.replace("yyyy",p.year).replace("MM",p.month).replace("dd",p.day).replace("HH",p.hour).replace("mm",p.minute).replace("ss",("0"+(+p.second)).slice(-2));
-}
-function uuid(){
- if(window.crypto&&crypto.randomUUID)return crypto.randomUUID();
- return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(c){var r=Math.random()*16|0;return(c==="x"?r:(r&3|8)).toString(16)});
-}
-var SA={getActiveSpreadsheet:function(){return{getSheetByName:function(n){return sheets[n]||null},insertSheet:function(n){return sheets[n]}}}};
-function parseD(str,tz,f){
- var m=/^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})$/.exec(str);
- var want=Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5]),g=want;
- for(var k=0;k<3;k++){var q=fmtD(new Date(g),tz,"yyyy-MM-dd HH:mm").match(/\d+/g);g+=want-Date.UTC(+q[0],+q[1]-1,+q[2],+q[3],+q[4])}
- return new Date(g);
-}
-var UT={formatDate:fmtD,getUuid:uuid,parseDate:parseD};
-var CCH={};
-var CA={getScriptCache:function(){return{get:function(k){var e=CCH[k];return e&&e.x>Date.now()?e.v:null},put:function(k,v,s){CCH[k]={v:v,x:Date.now()+s*1000}}}}};
-var LS={getScriptLock:function(){return{tryLock:function(){return true},releaseLock:function(){}}}};
-var CS={createTextOutput:function(s){return{s:s,setMimeType:function(){return this}}},MimeType:{JSON:1}};
-var MA={sendEmail:function(o){store.outbox.push({t:Date.now(),to:o.to,subject:o.subject,body:o.body});persist();updCount()},getRemainingDailyQuota:function(){return 100}};
-var SC={getProjectTriggers:function(){return[]},deleteTrigger:function(){},newTrigger:function(){var t={timeBased:function(){return t},everyDays:function(){return t},atHour:function(){return t},create:function(){}};return t}};
-
-var src=document.getElementById("gs-src").textContent;
-var GS=new Function("SpreadsheetApp","Utilities","LockService","ContentService","MailApp","ScriptApp","CacheService",
- src+"\nreturn{doGet:doGet,doPost:doPost,CONFIG:CONFIG,rows:rows,actualizarClientes:actualizarClientes,CHEAD:CHEAD,reminderMail:reminderMail,reviewMail:reviewMail,C:C,addDays:addDays,madridNow:madridNow,hhmm:hhmm,label:label,dow:dow};"
-)(SA,UT,LS,CS,MA,SC,CA);
-GS.CONFIG.OWNER_EMAIL="aviso@labarberia.demo";
-GS.CONFIG.ADMIN_KEY="demo1234";
-GS.CONFIG.WEB_URL=location.href.split(/[?#]/)[0];
-GS.CONFIG.ALLOW_EARLY_REVIEW=true; /* solo en la demo: poder opinar sin esperar a que pase la cita */
-var C=GS.C,PROS=GS.CONFIG.PROS;
-
-/* Datos de ejemplo (marcados como tales) para que la agenda no salga vacía */
-function seed(){
- var today=GS.madridNow().date,n=0,now=Utilities_now();
- for(var d=1;d<=10;d++){
-  var date=GS.addDays(today,d),w=GS.dow(date);
-  if(w===0)continue;
-  var close=(w===6?GS.CONFIG.CLOSE_SAT:GS.CONFIG.CLOSE)*60;
-  for(var p=1;p<PROS.length;p++)for(var m=GS.CONFIG.OPEN*60,k=0;m+30<=close;m+=30,k++){
-   if((d*31+p*17+k*13)%23!==0)continue;
-   n++;
-   store.Citas.push(["ej"+n,now,date,GS.hhmm(m),30,GS.CONFIG.SERVICES[0].n,PROS[p],"Cliente de ejemplo","","no","activa",uuid().replace(/-/g,""),"","","","es"]);
-  }
- }
-
- /* historial de ejemplo: clientes que repiten, cancelaciones, "no vino" y clientes que llevan meses sin venir */
- var NM=["Ander","Mikel","Iñigo","Unai","Jon","Aitor","Xabier","Asier","Oier","Eneko","Beñat","Julen","Koldo","Imanol","Pello","Gaizka"];
- NM.forEach(function(nm,i){
-  var ph="6000000"+(10+i),ago=i<11?3+(i*4)%25:70+(i-11)*17,gap=12+(i*7)%25,nv=i<11?2+(i*3)%8:1+i%4,fav=1+i%5;
-  for(var v=0;v<nv;v++){
-   var back=ago+v*gap,date=GS.addDays(today,-back);
-   while(GS.dow(date)===0){back++;date=GS.addDays(today,-back)}
-   var w=GS.dow(date),close=(w===6?GS.CONFIG.CLOSE_SAT:GS.CONFIG.CLOSE)*60,slots=Math.floor((close-GS.CONFIG.OPEN*60-30)/30)+1;
-   var m=GS.CONFIG.OPEN*60+((i*7+v*5+3)%slots)*30,svc=i%3===0?1:0,pro=(v+i)%7===3?1+(fav%5):fav;
-   var status=(v+i)%9===4&&v>0?"cancelada":((i+v)%13===5&&v>0?"noshow":"activa");
-   n++;
-   store.Citas.push(["ej"+n,now,date,GS.hhmm(m),GS.CONFIG.SERVICES[svc].min,GS.CONFIG.SERVICES[svc].n,PROS[pro],nm,ph,i%4===0?"sí":"no",status,uuid().replace(/-/g,""),"","","","es"]);
-  }
- });
- var rv=[[1,5],[1,5],[1,4],[2,4],[2,5],[3,5],[3,4],[3,4],[3,5],[4,3],[4,4]];
- rv.forEach(function(x,i){
-  store["Valoraciones"].push(["ejr"+i,GS.addDays(today,-3-i),PROS[x[0]],String(x[1]),"Ejemplo",now,"publicada"]);
- });
- persist();
-}
-function Utilities_now(){return fmtD(new Date(),"Europe/Madrid","yyyy-MM-dd HH:mm")}
-if(fresh){seed();GS.actualizarClientes()}
-
-/* "Servidor": las llamadas de la página a demo://local las responde Code.gs */
-var realFetch=window.fetch;
-window.fetch=function(url,opt){
- if(String(url).indexOf("demo://local")!==0)return realFetch.apply(this,arguments);
- return new Promise(function(res){
-  setTimeout(function(){
-   var o;
-   try{
-    if(opt&&opt.method==="POST")o=GS.doPost({postData:{contents:opt.body}});
-    else o=GS.doGet({parameter:Object.fromEntries(new URL(url).searchParams)});
-   }catch(e){o={s:"{\"ok\":false,\"code\":\"error\"}"}}
-   res(new Response(o.s,{status:200,headers:{"Content-Type":"application/json"}}));
-  },350); /* latencia de red simulada */
- });
-};
-
-/* ---------- Barra y panel de herramientas ---------- */
-function $(i){return document.getElementById(i)}
-function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]})}
-function updCount(){var e=$("dcount");if(e)e.textContent=store.outbox.length?"("+store.outbox.length+")":""}
-var tab="ag",showEx=false,msg="";
-function ddmm(d){var p=d.split("-");return p[2]+"/"+p[1]}
-function myBookings(){return GS.rows().filter(function(r){return r.active&&r.id.indexOf("ej")!==0}).sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:a.t-b.t})}
-function postJSON(o){return JSON.parse(GS.doPost({postData:{contents:JSON.stringify(o)}}).s)}
-
-function render(){
- var b=$("dbody"),h="";
- [].forEach.call(document.querySelectorAll("#dtabs button"),function(x){x.setAttribute("aria-pressed",String(x.getAttribute("data-t")===tab))});
- if(tab==="ag"){
-  var all=GS.rows().filter(function(r){return r.active}).sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:a.t-b.t});
-  var ex=all.filter(function(r){return r.id.indexOf("ej")===0}).length,list=showEx?all:all.filter(function(r){return r.id.indexOf("ej")!==0});
-  h+="<p class=\"dn\">Esto es lo que verá la barbería. En la versión real es una hoja de Google que se rellena sola.</p>";
-  h+="<label class=\"dchk\"><input type=\"checkbox\" id=\"dex\""+(showEx?" checked":"")+"> Mostrar también las "+ex+" citas de ejemplo</label>";
-  if(!list.length)h+="<p class=\"dn\">Todavía no hay citas. Haz una reserva en la página y aparecerá aquí al instante.</p>";
-  else{
-   h+="<div class=\"dscroll\"><table><thead><tr><th>Día</th><th>Hora</th><th>Barbero</th><th>Servicio</th><th>Cliente</th><th>Teléfono</th><th>Email</th><th></th></tr></thead><tbody>";
-   list.forEach(function(r){var v=r.raw;h+="<tr><td>"+ddmm(r.d)+"</td><td>"+GS.hhmm(r.t)+"</td><td>"+esc(v[C.pro])+"</td><td>"+esc(v[C.service])+"</td><td>"+esc(v[C.name])+"</td><td>"+esc(r.ph)+"</td><td>"+esc(r.em)+"</td><td><button class=\"dsm\" data-cancel=\""+esc(r.id)+"\">Cancelar</button></td></tr>"});
-   h+="</tbody></table></div>";
-  }
- }else if(tab==="rs"){
-  var rs=store["Valoraciones"];
-  h+="<p class=\"dn\">Pestaña \"Valoraciones\" de la hoja: una fila por valoración (de ejemplo o de la demo). La barbería puede quitar una con un clic y la nota media se recalcula.</p>";
-  h+="<div class=\"dscroll\"><table><thead><tr><th>Barbero</th><th>★</th><th>Cliente</th><th></th></tr></thead><tbody>";
-  for(var i=rs.length-1;i>=0;i--){var x=rs[i],vis=String(x[6]).toLowerCase()==="publicada";h+="<tr"+(vis?"":" class=\"dim\"")+"><td>"+esc(x[2])+"</td><td>"+esc(x[3])+"</td><td>"+esc(x[4])+"</td><td><button class=\"dsm\" data-vis=\""+i+"\">"+(vis?"Quitar":"Poner")+"</button></td></tr>"}
-  h+="</tbody></table></div>";
- }else if(tab==="cl"){
-  var cl=store["Clientes"];
-  h+="<p class=\"dn\">Pestaña \"Clientes\" de la hoja de Google: una fila por cliente, se actualiza sola cada día a las 6:00. Aquí está recién calculada.</p>";
-  h+="<div class=\"dacts\"><button class=\"dbtn\" id=\"dcl\">Actualizar ahora</button></div>";
-  h+="<div class=\"dscroll\"><table><thead><tr>"+GS.CHEAD.map(function(x){return"<th>"+esc(x)+"</th>"}).join("")+"</tr></thead><tbody>";
-  cl.forEach(function(r){h+="<tr>"+GS.CHEAD.map(function(_,j){return"<td>"+esc(r[j]==null?"":r[j])+"</td>"}).join("")+"</tr>"});
-  h+="</tbody></table></div>";
- }else if(tab==="em"){
-  h+="<p class=\"dn\">Los emails que se han enviado (clientes y aviso a la barbería). Los enlaces funcionan.</p>";
-  if(!store.outbox.length)h+="<p class=\"dn\">Aún no se ha enviado ninguno. Reserva una cita poniendo un email.</p>";
-  store.outbox.slice().reverse().forEach(function(m){
-   var own=m.to===GS.CONFIG.OWNER_EMAIL,body=esc(m.body).replace(/(https?:\/\/[^\s]+|file:\/\/[^\s]+)/g,"<a href=\"$1\">$1</a>");
-   h+="<article class=\"dmail\"><div class=\"dmh\"><span>"+(own?"Aviso a la barbería":"Para: "+esc(m.to))+"</span><span>"+new Date(m.t).toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"})+"</span></div><b>"+esc(m.subject)+"</b><pre>"+body+"</pre></article>";
-  });
- }else{
-  var mb=myBookings().filter(function(r){return r.em});
-  h+="<p class=\"dn\">En la versión real estos dos emails salen solos. Aquí los puedes disparar para enseñarlos sin esperar.</p>";
-  if(!mb.length)h+="<p class=\"dn\"><b>Primero haz una reserva en la página poniendo un email</b> (cualquiera) y vuelve aquí.</p>";
-  else{
-   h+="<label class=\"dl\">Cita<select id=\"dsel\">"+mb.map(function(r){return"<option value=\""+esc(r.id)+"\">"+esc(r.raw[C.pro])+" · "+ddmm(r.d)+" "+GS.hhmm(r.t)+" · "+esc(r.raw[C.name])+"</option>"}).join("")+"</select></label>";
-   h+="<div class=\"dacts\"><button class=\"dbtn\" id=\"drem\">Recordatorio (el día antes, 18:00)</button><button class=\"dbtn\" id=\"drev\">Petición de valoración (después de la cita)</button></div>";
-  }
-  if(msg)h+="<p class=\"dok\" role=\"status\">"+msg+"</p>";
-  h+="<hr><div class=\"dacts\"><button class=\"dbtn dred\" id=\"dreset\">Reiniciar la demo (borra todo)</button></div>";
- }
- b.innerHTML=h;
- updCount();
-}
-function open(t){tab=t||tab;msg="";$("dpanel").hidden=false;render()}
-$("dopen").onclick=function(){open()};
-function admOn(){return document.body.classList.contains("admin")}
-function admLbl(){$("dadm").textContent=admOn()?"Volver a la web":"Abrir el panel de la barbería"}
-admLbl();
-$("dadm").onclick=function(){
- if(admOn()){adminExit()}
- else{try{sessionStorage.setItem("barberia-admin-key","demo1234")}catch(e){}adminInit()}
- admLbl();
-};
-new MutationObserver(admLbl).observe(document.body,{attributes:true,attributeFilter:["class"]});
-$("dclose").onclick=function(){$("dpanel").hidden=true};
-$("dtabs").onclick=function(e){var t=e.target.closest("button");if(t){tab=t.getAttribute("data-t");msg="";render()}};
-$("dbody").onclick=function(e){
- var t=e.target;
- if(t.id==="dcl"){GS.actualizarClientes();render();return}
- if(t.id==="dex"){showEx=t.checked;render();return}
- if(t.getAttribute("data-cancel")){postJSON({action:"cancel",id:t.getAttribute("data-cancel"),token:GS.rows().filter(function(r){return r.id===t.getAttribute("data-cancel")})[0].token});render();return}
- if(t.getAttribute("data-vis")!==null){var row=store["Valoraciones"][+t.getAttribute("data-vis")];row[6]=String(row[6]).toLowerCase()==="publicada"?"oculta":"publicada";persist();render();return}
- var sel=$("dsel"),r=sel&&GS.rows().filter(function(x){return x.id===sel.value})[0];
- if(t.id==="drem"&&r){GS.reminderMail(r);msg="Recordatorio enviado a <b>"+esc(r.em)+"</b>. Míralo en la pestaña Emails.";render()}
- if(t.id==="drev"&&r){GS.reviewMail(r);msg="Petición enviada a <b>"+esc(r.em)+"</b>. Abre el email y pulsa el enlace para poner las estrellas.";render()}
- if(t.id==="dreset"){try{localStorage.removeItem(K);localStorage.removeItem(PAGE_KEY)}catch(x){}location.href=location.href.split(/[?#]/)[0]}
-};
-document.addEventListener("keydown",function(e){if(e.key==="Escape")$("dpanel").hidden=true});
-updCount();
-})();
-</script>
-
 <div class="pole" aria-hidden="true"></div>
 <header class="hero"><div class="wrap">
 <div class="lang" role="group" aria-label="Idioma / Hizkuntza"><button type="button" data-l="es" aria-pressed="true">ES</button><button type="button" data-l="eu" aria-pressed="false">EU</button></div>
@@ -1081,6 +193,7 @@ updCount();
 <label><span data-i="lName">Nombre</span><input type="text" id="cname" autocomplete="name"></label>
 <label><span data-i="lPhone">Teléfono</span><input type="tel" id="cphone" autocomplete="tel"></label>
 <label><span data-i="lEmail">Email</span> <span class="hint" data-i="lEmailH">(opcional: te mandamos la confirmación y un recordatorio)</span><input type="email" id="cemail" autocomplete="email"></label>
+<label class="chk"><input type="checkbox" id="promo"><span data-i="promo">Quiero recibir ofertas y novedades de la barbería por email (opcional)</span></label>
 <div class="hpw" aria-hidden="true"><label>No rellenar<input type="text" id="hp" tabindex="-1" autocomplete="off"></label></div>
 <div class="sum" id="sum"></div>
 <p class="priv"><span data-i="priv">Usaremos tu nombre, teléfono y email solo para gestionar tu cita, recordártela y pedirte tu valoración.</span> <a href="#" data-priv data-i="privL">Política de privacidad</a></p>
@@ -1090,7 +203,7 @@ updCount();
 </div>
 </div>
 </div>
-<section class="card svcs" id="servicios"><h2 class="t" data-i="svcTitle">Servicios y precios</h2><p class="s" data-i="svcSub">Precio de estudiante con carnet o matrícula.</p><div id="svclist"></div></section>
+<section class="card svcs" id="servicios"><h2 class="t" data-i="svcTitle">Servicios y precios</h2><p class="s" data-i="svcSub">Precio de estudiante con carnet o matrícula.</p><div id="svclist"></div><p class="loynote" id="loynote" hidden></p></section>
 </main>
 <div id="adm" class="wrap admwrap" hidden></div>
 <footer>
@@ -1104,12 +217,14 @@ updCount();
 <script>
 var CFG={
 name:"La Barbería de Peña",
-api:"demo://local",   // <- pega aquí la URL /exec de tu Apps Script. Vacía = modo demostración
+api:"",   // <- pega aquí la URL /exec de tu Apps Script. Vacía = modo demostración
 phone:"944 37 28 89",
 address:"Calle Arrandi, 38, San Vicente de Barakaldo",
 nif:"",   // NIF/CIF del titular: si lo rellenas, aparece en la política de privacidad
 // Servicios, barberos y horarios: deben ser IGUALES que en Code.gs
-services:[{n:"Corte de pelo",eu:"Ile-mozketa",min:30,p:20,ps:17},{n:"Pelo y barba",eu:"Ilea eta bizarra",min:45,p:25,ps:22}],
+services:[{n:"Corte de pelo",eu:"Ile-mozketa",min:30,p:20,ps:17},{n:"Pelo y barba",eu:"Ilea eta bizarra",min:45,p:25,ps:22},{n:"Corte y cejas",eu:"Ile-mozketa eta bekainak",min:30,p:23,ps:20},{n:"Arreglo de barba",eu:"Bizar-moldaketa",min:30,p:12,ps:10},{n:"Afeitado clásico",eu:"Bizar-kentze klasikoa",min:30,p:15,ps:13},{n:"Corte niño (hasta 12 años)",eu:"Haurren ile-mozketa (12 urte arte)",min:30,p:14,ps:14}],
+// Tarjeta de fidelidad (igual que LOYALTY_* en Code.gs). every:0 = sin tarjeta
+loyalty:{every:10,es:"un corte a mitad de precio, o cejas o barba incluidas con tu corte (a elegir)",eu:"ile-mozketa erdi prezioan, edo bekainak edo bizarra ile-mozketarekin barne (aukeran)"},
 pros:["Cualquier barbero","Peña","Yeray","Ashok","Joel","Josu"],
 open:9,close:21,closeSat:15,days:14,lead:30,
 // Presentación opcional de cada barbero (mismo orden que pros).
@@ -1161,8 +276,11 @@ limit:"Ya tienes citas pendientes con este teléfono. Si necesitas otra, lláman
 saveErr:"Ha habido un problema al guardar la cita. Inténtalo de nuevo o llámanos al ",netErr:"No hemos podido conectar. Revisa tu conexión e inténtalo de nuevo, o llámanos al ",
 foot:"Barbería tradicional en San Vicente de Barakaldo, desde 1964.",demoNote:"Versión de demostración: servicios, precios y barberos son de ejemplo. La cita se guarda solo en este dispositivo.",
 pmTitle:"Política de privacidad",
-pm:"<p><b>Responsable:</b> %1%2. %3. Tel. %4.</p><p><b>Qué datos recogemos:</b> tu nombre, teléfono, email (solo si lo indicas), el servicio, el barbero y la hora de tu cita y, si la envías, tu valoración del barbero (de 1 a 5 estrellas).</p><p><b>Para qué:</b> gestionar tu cita, avisarte de cambios, enviarte la confirmación y un recordatorio por email (si indicaste uno), pedirte una valoración después de la visita y elaborar estadísticas internas del negocio (por ejemplo, qué servicios y horarios se piden más). No usamos tus datos para enviarte publicidad.</p><p><b>Base legal:</b> atender tu solicitud de cita (art. 6.1.b RGPD) y tu consentimiento para los emails, que das al escribir tu correo (art. 6.1.a RGPD).</p><p><b>Conservación:</b> el tiempo necesario para gestionar tu cita y atender posibles responsabilidades.</p><p><b>Destinatarios:</b> no cedemos tus datos a terceros. Se guardan en servicios de Google (Google Sheets y Apps Script), que actúan como encargados del tratamiento.</p><p><b>Tus derechos:</b> puedes acceder a tus datos, rectificarlos, suprimirlos, oponerte, limitar su tratamiento o pedir su portabilidad llamando al %4 o en el propio local. Si crees que tus datos no se tratan bien, puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>",
-close:"Cerrar"
+pm:"<p><b>Responsable:</b> %1%2. %3. Tel. %4.</p><p><b>Qué datos recogemos:</b> tu nombre, teléfono, email (solo si lo indicas), el servicio, el barbero y la hora de tu cita y, si la envías, tu valoración del barbero (de 1 a 5 estrellas).</p><p><b>Para qué:</b> gestionar tu cita, avisarte de cambios, enviarte la confirmación y un recordatorio por email (si indicaste uno), pedirte una valoración después de la visita elaborar estadísticas internas del negocio (por ejemplo, qué servicios y horarios se piden más) y llevar tu tarjeta de fidelidad (contamos tus visitas por teléfono). Solo te enviaremos ofertas o novedades si marcas la casilla opcional al reservar, y puedes retirar ese consentimiento cuando quieras avisándonos.</p><p><b>Base legal:</b> atender tu solicitud de cita (art. 6.1.b RGPD) y tu consentimiento para los emails de la cita, que das al escribir tu correo, y para las ofertas, solo si marcas la casilla (art. 6.1.a RGPD).</p><p><b>Conservación:</b> el tiempo necesario para gestionar tu cita y atender posibles responsabilidades.</p><p><b>Destinatarios:</b> no cedemos tus datos a terceros. Se guardan en servicios de Google (Google Sheets y Apps Script), que actúan como encargados del tratamiento.</p><p><b>Tus derechos:</b> puedes acceder a tus datos, rectificarlos, suprimirlos, oponerte, limitar su tratamiento o pedir su portabilidad llamando al %4 o en el propio local. Si crees que tus datos no se tratan bien, puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>",
+close:"Cerrar",
+promo:"Quiero recibir ofertas y novedades de la barbería por email (opcional)",promoNoMail:"Para recibir ofertas, escribe tu email.",
+loyOn:"Tarjeta de fidelidad: visita %1 de %2. La visita %2 tiene premio: %3.",loyHit:"¡Esta visita tiene premio! Puedes elegir: %1.",loyAria:"%1 visitas de %2",
+loyNote:"Tarjeta de fidelidad: cada visita nº %1 tiene premio: %2."
 },
 eu:{
 pageTitle:"Hartu zure hitzordua · La Barbería de Peña",
@@ -1203,10 +321,13 @@ limit:"Telefono honekin hitzordu zain badituzu. Beste bat behar baduzu, deitu ie
 saveErr:"Arazo bat egon da hitzordua gordetzean. Saiatu berriro edo deitu iezaguzu: ",netErr:"Ezin izan gara konektatu. Egiaztatu zure konexioa eta saiatu berriro, edo deitu iezaguzu: ",
 foot:"Barbertegi tradizionala Barakaldoko San Vicenten, 1964tik.",demoNote:"Demo bertsioa: zerbitzuak, prezioak eta barberoak adibide dira. Hitzordua gailu honetan bakarrik gordetzen da.",
 pmTitle:"Pribatutasun politika",
-pm:"<p><b>Arduraduna:</b> %1%2. %3. Tel. %4.</p><p><b>Zer datu biltzen ditugu:</b> zure izena, telefonoa, posta elektronikoa (adierazten baduzu bakarrik), zerbitzua, barberoa eta zure hitzorduaren ordua eta, bidaltzen baduzu, barberoaren balorazioa (1etik 5era izarretan).</p><p><b>Zertarako:</b> hitzordua kudeatzeko, aldaketen berri emateko, berrespena eta gogorarazpena posta elektronikoz bidaltzeko (helbide bat eman baduzu), bisitaren ondoren balorazio bat eskatzeko eta negozioaren barne-estatistikak egiteko (adibidez, zein zerbitzu eta ordutegi eskatzen diren gehien). Ez ditugu zure datuak publizitatea bidaltzeko erabiltzen.</p><p><b>Oinarri juridikoa:</b> zure hitzordu-eskaera artatzea (DBEO 6.1.b art.) eta posta elektronikorako zure baimena, zure helbidea idaztean ematen duzuna (DBEO 6.1.a art.).</p><p><b>Gordetze-epea:</b> hitzordua kudeatzeko eta ager daitezkeen erantzukizunei aurre egiteko beharrezkoa den bitartean.</p><p><b>Hartzaileak:</b> ez dizkiegu zure datuak hirugarrenei lagatzen. Googleren zerbitzuetan (Google Sheets eta Apps Script) gordetzen dira, tratamenduaren eragile gisa.</p><p><b>Zure eskubideak:</b> zure datuetara sartu, zuzendu, ezabatu, aurka egin, tratamendua mugatu edo eramangarritasuna eskatu dezakezu, %4 telefonora deituz edo lokalean bertan. Zure datuak ez direla ondo tratatzen uste baduzu, Datuak Babesteko Espainiako Agentziari (aepd.es) erreklamazioa aurkez diezaiokezu.</p>",
-close:"Itxi"
+pm:"<p><b>Arduraduna:</b> %1%2. %3. Tel. %4.</p><p><b>Zer datu biltzen ditugu:</b> zure izena, telefonoa, posta elektronikoa (adierazten baduzu bakarrik), zerbitzua, barberoa eta zure hitzorduaren ordua eta, bidaltzen baduzu, barberoaren balorazioa (1etik 5era izarretan).</p><p><b>Zertarako:</b> hitzordua kudeatzeko, aldaketen berri emateko, berrespena eta gogorarazpena posta elektronikoz bidaltzeko (helbide bat eman baduzu), bisitaren ondoren balorazio bat eskatzeko eta negozioaren barne-estatistikak egiteko (adibidez, zein zerbitzu eta ordutegi eskatzen diren gehien) eta zure fidelitate-txartela eramateko (zure bisitak telefonoaren arabera zenbatzen ditugu). Eskaintzak edo berriak bakarrik bidaliko dizkizugu erreserba egitean aukerako kutxa markatzen baduzu, eta baimen hori nahi duzunean kendu dezakezu guri abisatuz.</p><p><b>Oinarri juridikoa:</b> zure hitzordu-eskaera artatzea (DBEO 6.1.b art.) eta hitzorduko posta elektronikorako zure baimena, zure helbidea idaztean ematen duzuna, eta eskaintzetarakoa, kutxa markatzen baduzu bakarrik (DBEO 6.1.a art.).</p><p><b>Gordetze-epea:</b> hitzordua kudeatzeko eta ager daitezkeen erantzukizunei aurre egiteko beharrezkoa den bitartean.</p><p><b>Hartzaileak:</b> ez dizkiegu zure datuak hirugarrenei lagatzen. Googleren zerbitzuetan (Google Sheets eta Apps Script) gordetzen dira, tratamenduaren eragile gisa.</p><p><b>Zure eskubideak:</b> zure datuetara sartu, zuzendu, ezabatu, aurka egin, tratamendua mugatu edo eramangarritasuna eskatu dezakezu, %4 telefonora deituz edo lokalean bertan. Zure datuak ez direla ondo tratatzen uste baduzu, Datuak Babesteko Espainiako Agentziari (aepd.es) erreklamazioa aurkez diezaiokezu.</p>",
+close:"Itxi",
+promo:"Barbertegiaren eskaintzak eta berriak posta elektronikoz jaso nahi ditut (aukerakoa)",promoNoMail:"Eskaintzak jasotzeko, idatzi zure posta elektronikoa.",
+loyOn:"Fidelitate-txartela: %1/%2 bisita. %2. bisitak saria du: %3.",loyHit:"Bisita honek saria du! Aukeratu dezakezu: %1.",loyAria:"%1/%2 bisita",
+loyNote:"Fidelitate-txartela: %1. bisita bakoitzak saria du: %2."
 }};
-function t(k,a,b,c,d){var v=TX[LANG][k];if(v==null)v=TX.es[k];return String(v).replace("%1",a==null?"":a).replace("%2",b==null?"":b).replace("%3",c==null?"":c).replace("%4",d==null?"":d)}
+function t(k,a,b,c,d){var v=TX[LANG][k];if(v==null)v=TX.es[k];return String(v).replace(/%1/g,a==null?"":a).replace(/%2/g,b==null?"":b).replace(/%3/g,c==null?"":c).replace(/%4/g,d==null?"":d)}
 
 var st={s:null,p:null,d:null,t:null,edit:false};
 var $=function(i){return document.getElementById(i)};
@@ -1254,8 +375,9 @@ $("pmx").onclick=function(){$("pm").hidden=true};
 $("pm").onclick=function(e){if(e.target===$("pm"))$("pm").hidden=true};
 document.addEventListener("keydown",function(e){if(e.key==="Escape")$("pm").hidden=true});
 CFG.services.forEach(function(s){
- $("svclist").appendChild(mk("div","svc","<div><b>"+esc(sname(s))+"</b><small>"+s.min+" "+t("min")+"</small></div><div class=\"sp\"><b>"+eur(s.p)+"</b><small>"+t("stuPrice")+" "+eur(s.ps)+"</small></div>"));
+ $("svclist").appendChild(mk("div","svc","<div><b>"+esc(sname(s))+"</b><small>"+s.min+" "+t("min")+"</small></div><div class=\"sp\"><b>"+eur(s.p)+"</b><small>"+(s.ps<s.p?t("stuPrice")+" "+eur(s.ps):"")+"</small></div>"));
 });
+if(CFG.loyalty&&CFG.loyalty.every>0){var ln=$("loynote");ln.textContent=t("loyNote",CFG.loyalty.every,CFG.loyalty[LANG]||CFG.loyalty.es);ln.hidden=false}
 
 /* Servicios */
 CFG.services.forEach(function(s,i){
@@ -1400,13 +522,19 @@ var KEY="barberia-cita-v2",cur=null;
 try{var raw=localStorage.getItem(KEY);cur=raw?JSON.parse(raw):null}catch(e){cur=null}
 function save(b){try{if(b)localStorage.setItem(KEY,JSON.stringify(b));else localStorage.removeItem(KEY)}catch(e){}}
 function di(){if(!cur)return-1;for(var i=0;i<dates.length;i++)if(dates[i].key===cur.d)return i;return-1}
+function loyHtml(lo){
+ if(!LIVE||!lo||!CFG.loyalty||!CFG.loyalty.every)return"";
+ var rw=CFG.loyalty[LANG]||CFG.loyalty.es,dots="";
+ for(var k=1;k<=lo.e;k++)dots+="<i class=\""+(k<=lo.k?"on":"")+(k===lo.e?" gift":"")+"\"></i>";
+ return"<div class=\"loy\"><div class=\"stamps\" role=\"img\" aria-label=\""+esc(t("loyAria",lo.k,lo.e))+"\">"+dots+"</div><p>"+(lo.r?t("loyHit",esc(rw)):t("loyOn",lo.k,lo.e,esc(rw)))+"</p></div>";
+}
 function mine(msg){
  var box=$("mine");
  if(cur&&di()<0){cur=null;save(null)}
  if(!cur){box.hidden=true;return}
  var s=CFG.services[cur.s],d=dates[di()];
  box.hidden=false;
- box.innerHTML="<div class=\"tick\" aria-hidden=\"true\">✓</div><h2>"+(msg||t("mineTitle"))+"</h2><p class=\"who\">"+t("attends")+" <b>"+esc(CFG.pros[cur.p])+"</b></p><p>"+esc(sname(s))+" · "+eur(cur.stu?s.ps:s.p)+"<br>"+dline(d,cur.t)+"</p>"+(LIVE&&cur.em?"<p>"+t("emailNote","<b>"+esc(cur.em)+"</b>")+"</p>":"")+"<p>"+t("see",esc(CFG.address),esc(CFG.phone))+"</p><div class=\"acts\" id=\"a1\"></div><div class=\"acts\" id=\"a2\"></div>";
+ box.innerHTML="<div class=\"tick\" aria-hidden=\"true\">✓</div><h2>"+(msg||t("mineTitle"))+"</h2><p class=\"who\">"+t("attends")+" <b>"+esc(CFG.pros[cur.p])+"</b></p><p>"+esc(sname(s))+" · "+eur(cur.stu?s.ps:s.p)+"<br>"+dline(d,cur.t)+"</p>"+(LIVE&&cur.em?"<p>"+t("emailNote","<b>"+esc(cur.em)+"</b>")+"</p>":"")+"<p>"+t("see",esc(CFG.address),esc(CFG.phone))+"</p>"+loyHtml(cur.lo)+"<div class=\"acts\" id=\"a1\"></div><div class=\"acts\" id=\"a2\"></div>";
  var c=mk("button","btn2",t("change"));c.onclick=startEdit;
  var x=mk("button","btn2 danger",t("cancel"));x.onclick=askCancel;
  $("a1").appendChild(c);$("a1").appendChild(x);
@@ -1424,7 +552,7 @@ function startEdit(){
  [].forEach.call($("days").children,function(c){c.setAttribute("aria-pressed","false")});
  show("s2");show("s3");$("s4").hidden=true;
  $("slots").innerHTML="";sum();
- $("cname").value=cur.n||"";$("cphone").value=cur.ph||"";$("cemail").value=cur.em||"";
+ $("cname").value=cur.n||"";$("cphone").value=cur.ph||"";$("cemail").value=cur.em||"";$("promo").checked=!!cur.pr;
  $("ttl").textContent=t("editTitle");$("go").textContent=t("goSave");
  $("keep").hidden=false;$("mine").hidden=true;$("app").hidden=false;
  $("reservar").scrollIntoView({behavior:"smooth",block:"start"});
@@ -1468,8 +596,8 @@ function sync(id,token,fromLink){
    return;
   }
   if(r.s<0)return;
-  var c={id:id,token:token,s:r.s,p:r.p,d:r.d,t:r.t,n:r.n,ph:r.ph,stu:r.stu,em:r.em};
-  if(cur&&cur.id===id&&cur.d===c.d&&cur.t===c.t&&cur.p===c.p&&cur.s===c.s&&cur.em===c.em)return;
+  var c={id:id,token:token,s:r.s,p:r.p,d:r.d,t:r.t,n:r.n,ph:r.ph,stu:r.stu,em:r.em,pr:r.pr,lo:r.lo};
+  if(cur&&cur.id===id&&cur.d===c.d&&cur.t===c.t&&cur.p===c.p&&cur.s===c.s&&cur.em===c.em&&cur.pr===c.pr&&JSON.stringify(cur.lo)===JSON.stringify(c.lo))return;
   cur=c;save(cur);mine();$("app").hidden=!!cur;
  }).catch(function(){});
 }
@@ -1524,19 +652,20 @@ $("go").onclick=function(){
  if(n.length<2){fail(t("nameErr"));return}
  if(!/^\+?\d{9,13}$/.test(tl)){fail(t("phoneErr"));return}
  if(em&&!EMAIL_RE.test(em)){fail(t("emailErr"));return}
+ if($("promo").checked&&!em){fail(t("promoNoMail"));return}
  fail("");
  var d=dates[st.d],f=n.split(" ")[0],was=st.edit,stu=$("stu").checked;
- function done(id,token,p){
-  cur={id:id,token:token,s:st.s,p:p,d:d.key,t:st.t,n:n,ph:tl,stu:stu,em:em};save(cur);
+ function done(id,token,p,lo){
+  cur={id:id,token:token,s:st.s,p:p,d:d.key,t:st.t,n:n,ph:tl,stu:stu,em:em,pr:$("promo").checked&&!!em,lo:lo||null};save(cur);
   st.edit=false;$("app").hidden=true;
   mine(was?t("modified"):t("confirmed",esc(f)));
   $("reservar").scrollIntoView({block:"start"});
  }
  if(!LIVE){done("demo","demo",st.p===0?1:st.p);return}
  sending=true;$("go").disabled=true;var label=$("go").textContent;$("go").textContent=t("goWait");
- call({action:was?"update":"book",id:was?cur.id:undefined,token:was?cur.token:undefined,s:st.s,p:st.p,d:d.key,t:st.t,n:n,ph:tl,em:em,stu:stu,lang:LANG,hp:$("hp").value})
+ call({action:was?"update":"book",id:was?cur.id:undefined,token:was?cur.token:undefined,s:st.s,p:st.p,d:d.key,t:st.t,n:n,ph:tl,em:em,stu:stu,lang:LANG,promo:$("promo").checked,hp:$("hp").value})
  .then(function(r){
-  if(r.ok){done(r.id,r.token,r.p);return}
+  if(r.ok){done(r.id,r.token,r.p,r.lo);return}
   if(r.code==="taken"||r.code==="past"||r.code==="closed"){
    fail(r.code==="taken"?t("taken"):t("unavail"));
    st.t=null;sum();refresh();$("s3").scrollIntoView({behavior:"smooth",block:"nearest"});return;
@@ -1636,7 +765,7 @@ function bars(items,fmtv){
 function dmy(k){var p=(k||"").split("-");return p.length===3?p[2]+"/"+p[1]+"/"+p[0]:""}
 function clientRows(list,withDays){
  if(!list.length)return"<p class=\"note\">Ninguno por ahora.</p>";
- return"<div class=\"dscr\"><table class=\"ct\"><thead><tr><th>Cliente</th><th>Teléfono</th><th>Visitas</th><th>Gastado*</th><th>"+(withDays?"Sin venir":"Última")+"</th></tr></thead><tbody>"+list.map(function(c){return"<tr><td>"+esc(c.n)+"</td><td>"+(c.ph?"<a href=\"tel:"+esc(c.ph)+"\">"+esc(c.ph)+"</a>":"")+"</td><td>"+c.v+"</td><td>"+eur(c.g)+"</td><td>"+(withDays?c.s+" días":dmy(c.l))+"</td></tr>"}).join("")+"</tbody></table></div>";
+ return"<div class=\"dscr\"><table class=\"ct\"><thead><tr><th>Cliente</th><th>Teléfono</th><th>Visitas</th><th>Gastado*</th><th>"+(withDays?"Sin venir":"Última")+"</th><th>Ofertas</th></tr></thead><tbody>"+list.map(function(c){return"<tr class=\""+(c.of?"of":"")+"\"><td>"+esc(c.n)+"</td><td>"+(c.ph?"<a href=\"tel:"+esc(c.ph)+"\">"+esc(c.ph)+"</a>":"")+"</td><td>"+c.v+"</td><td>"+eur(c.g)+"</td><td>"+(withDays?c.s+" días":dmy(c.l))+"</td><td>"+(c.of?"Sí":"No")+"</td></tr>"}).join("")+"</tbody></table></div>";
 }
 function adminSummary(){
  var box=$("rstab");box.innerHTML="<p class=\"note\">Calculando…</p>";
@@ -1656,10 +785,19 @@ function adminSummary(){
    +"<h2>Por día de la semana</h2>"+bars(r.dows.map(function(x){return{l:TX.es.dn[x.d],v:x.v}}))
    +"<h2>Por hora</h2>"+bars(r.hours.map(function(x){return{l:x.h+":00",v:x.v}}))
    +"<h2>Por servicio</h2>"+bars(r.svcs.map(function(x){return{l:x.n,v:x.v,rev:x.rev}}),function(x){return x.v+" · "+eur(x.rev)})
-   +"<h2>Hace tiempo que no vienen</h2><p class=\"ads\">Más de "+r.days+" días sin venir y sin cita pendiente: "+c.inactiveN+(c.inactiveN>15?" (se muestran los 15 que más llevan)":"")+".</p>"+clientRows(c.inactive,true)
+   +"<h2>Hace tiempo que no vienen</h2><p class=\"ads\">Más de "+r.days+" días sin venir y sin cita pendiente: "+c.inactiveN+(c.inactiveN>60?" (se muestran los 60 que más llevan)":"")+". Han aceptado recibir ofertas: "+c.promoN+" de "+c.total+" clientes.</p>"
+   +"<label class=\"chk\"><input type=\"checkbox\" id=\"onlyof\"><span>Solo los que aceptaron ofertas</span></label><div id=\"inact\"></div><p><button type=\"button\" class=\"mini\" id=\"cpem\">Copiar emails de quienes aceptaron ofertas</button> <span class=\"ads\" id=\"cpok\" role=\"status\"></span></p>"
    +"<h2>Mejores clientes</h2>"+clientRows(c.top,false)
    +"<p class=\"ads\">La pestaña «"+"Clientes"+"» de la hoja de Google tiene la lista completa y se actualiza sola cada día.</p>";
   box.innerHTML=h;
+  var drawIn=function(){var l=c.inactive.filter(function(x){return!$("onlyof").checked||x.of});$("inact").innerHTML=clientRows(l,true)};
+  drawIn();$("onlyof").onchange=drawIn;
+  $("cpem").onclick=function(){
+   var em=c.inactive.filter(function(x){return x.of&&x.em}).map(function(x){return x.em}).join(", ");
+   if(!em){$("cpok").textContent="Nadie de esta lista ha aceptado ofertas.";return}
+   var ok=function(){$("cpok").textContent="Copiados. Mándalos en copia oculta (CCO) y añade cómo darse de baja."};
+   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(em).then(ok,function(){$("cpok").textContent=em});else $("cpok").textContent=em;
+  };
  }).catch(function(){box.innerHTML="<p class=\"err\" role=\"alert\">Sin conexión. Inténtalo de nuevo.</p>"});
 }
 function adminMsg(m){var e=$("adp");if(e)e.innerHTML="<p class=\"err\" role=\"alert\">"+esc(m)+"</p>"}
@@ -1678,7 +816,7 @@ function adminDraw(){
    var it=cover(q,m),sel=AD.sel&&AD.sel.p===q&&AD.sel.m===m?" sel":"";
    if(!it)h+="<td class=\"fr"+sel+"\"><button data-p=\""+q+"\" data-m=\""+m+"\" aria-label=\"Libre "+esc(CFG.pros[q])+" "+fmt(m)+"\"></button></td>";
    else if(it.blk)h+="<td class=\"bl"+sel+"\"><button data-p=\""+q+"\" data-m=\""+m+"\" data-i=\""+esc(it.i)+"\">"+(it.t===m?"Bloqueado":"")+"</button></td>";
-   else h+="<td class=\"bk"+(it.ns?" ns":"")+(it.t===m?"":" cont")+sel+"\"><button data-p=\""+q+"\" data-m=\""+m+"\" data-i=\""+esc(it.i)+"\">"+(it.t===m?(it.ns?"✗ ":"")+esc(it.n)+" · "+esc(it.sv):"│")+"</button></td>";
+   else h+="<td class=\"bk"+(it.ns?" ns":"")+(it.t===m?"":" cont")+sel+"\"><button data-p=\""+q+"\" data-m=\""+m+"\" data-i=\""+esc(it.i)+"\">"+(it.t===m?(it.ns?"✗ ":"")+(it.lo&&it.lo.r?"★ ":"")+esc(it.n)+" · "+esc(it.sv):"│")+"</button></td>";
   }
   h+="</tr>";
  }
@@ -1694,7 +832,7 @@ function adminPanel(){
  var dt=AD.dates[AD.di],it=s.i?AD.rows.filter(function(r){return r.i===s.i})[0]:null,cl=(dt.dow===6?CFG.closeSat:CFG.close)*60;
  if(it&&!it.blk){
   var over=dt.past||(dt.today&&it.t+it.m<=madNow().min);
-  box.innerHTML="<h2>"+esc(it.n)+(it.ns?" · no vino":"")+"</h2><p>"+esc(it.sv)+(it.stu?" (estudiante)":"")+" · "+esc(CFG.pros[it.p])+" · "+fmt(it.t)+"–"+fmt(it.t+it.m)+"</p><p>"+(it.ph?"<a href=\"tel:"+esc(it.ph)+"\">"+esc(it.ph)+"</a>":"")+(it.em?" · "+esc(it.em):"")+"</p><div class=\"acts\">"+(over?"<button class=\"btn2\" id=\"ans\">"+(it.ns?"Quitar la marca «no vino»":"Marcar: no vino")+"</button>":"")+(it.ns?"":"<button class=\"btn2 danger\" id=\"acan\">Cancelar cita</button>")+"</div><p class=\"err\" id=\"aperr\" role=\"alert\"></p>";
+  box.innerHTML="<h2>"+esc(it.n)+(it.ns?" · no vino":"")+"</h2><p>"+esc(it.sv)+(it.stu?" (estudiante)":"")+" · "+esc(CFG.pros[it.p])+" · "+fmt(it.t)+"–"+fmt(it.t+it.m)+"</p><p>"+(it.ph?"<a href=\"tel:"+esc(it.ph)+"\">"+esc(it.ph)+"</a>":"")+(it.em?" · "+esc(it.em):"")+(it.pr?" · acepta ofertas":"")+"</p>"+(it.lo?"<p class=\"loyadm\">"+(it.lo.r?"<b>★ Visita con premio</b> (nº "+it.lo.n+"): "+esc(CFG.loyalty.es):"Tarjeta de fidelidad: visita "+it.lo.k+" de "+it.lo.e)+"</p>":"")+"<div class=\"acts\">"+(over?"<button class=\"btn2\" id=\"ans\">"+(it.ns?"Quitar la marca «no vino»":"Marcar: no vino")+"</button>":"")+(it.ns?"":"<button class=\"btn2 danger\" id=\"acan\">Cancelar cita</button>")+"</div><p class=\"err\" id=\"aperr\" role=\"alert\"></p>";
   if($("ans"))$("ans").onclick=function(){adminDo({action:"adminNoShow",id:it.i})};
   var c=$("acan");if(!c)return;c.onclick=function(){if(c.getAttribute("data-s")!=="1"){c.setAttribute("data-s","1");c.textContent="¿Seguro? Pulsa otra vez"+(it.em?" (se avisa al cliente)":"");return}adminDo({action:"adminCancel",id:it.i})};
   return;
@@ -1708,14 +846,15 @@ function adminPanel(){
  if(maxm>240)durs+="<option value=\""+maxm+"\">Hasta el cierre</option>";
  var svs=CFG.services.map(function(x,i){return"<option value=\""+i+"\">"+esc(x.n)+" ("+x.min+" min)</option>"}).join("");
  box.innerHTML="<h2>Hueco libre · "+esc(CFG.pros[s.p])+" · "+fmt(s.m)+"</h2>"
-  +"<h3>Cita por teléfono o en persona</h3><div class=\"row\"><label>Nombre<input type=\"text\" id=\"bn\"></label><label>Teléfono<input type=\"tel\" id=\"bp\"></label><label>Email (opcional)<input type=\"email\" id=\"be\"></label><label>Servicio<select id=\"bs\">"+svs+"</select></label></div><p class=\"err\" id=\"aperr\" role=\"alert\"></p><button class=\"btn\" id=\"abk\">Guardar cita</button>"
+  +"<h3>Cita por teléfono o en persona</h3><div class=\"row\"><label>Nombre<input type=\"text\" id=\"bn\"></label><label>Teléfono<input type=\"tel\" id=\"bp\"></label><label>Email (opcional)<input type=\"email\" id=\"be\"></label><label class=\"chk\"><input type=\"checkbox\" id=\"bpr\"><span>Acepta recibir ofertas por email (lo ha dicho el cliente)</span></label><label>Servicio<select id=\"bs\">"+svs+"</select></label></div><p class=\"err\" id=\"aperr\" role=\"alert\"></p><button class=\"btn\" id=\"abk\">Guardar cita</button>"
   +"<h3>O bloquear</h3><div class=\"row\"><label>Duración<select id=\"bd\">"+durs+"</select></label></div><div class=\"acts\"><button class=\"btn2\" id=\"ab1\">Bloquear a "+esc(CFG.pros[s.p])+"</button><button class=\"btn2\" id=\"ab0\">Bloquear a todos</button></div>";
  $("abk").onclick=function(){
   var n=$("bn").value.trim(),tl=$("bp").value.replace(/\s/g,""),em=$("be").value.trim(),e=$("aperr");
   if(n.length<2){e.textContent="Escribe el nombre.";return}
   if(!/^\+?\d{9,13}$/.test(tl)){e.textContent="Teléfono no válido (9 cifras o más).";return}
   if(em&&!EMAIL_RE.test(em)){e.textContent="Email no válido.";return}
-  adminDo({action:"adminBook",s:+$("bs").value,p:s.p,d:dt.key,t:s.m,n:n,ph:tl,em:em,stu:false,lang:"es"}).then(function(r){
+  if($("bpr").checked&&!em){e.textContent="Para ofertas hace falta el email.";return}
+  adminDo({action:"adminBook",s:+$("bs").value,p:s.p,d:dt.key,t:s.m,n:n,ph:tl,em:em,stu:false,lang:"es",promo:$("bpr").checked}).then(function(r){
    if(r&&!r.ok)$("adp").innerHTML="<p class=\"err\" role=\"alert\">"+(r.code==="taken"?"Ese hueco no está libre durante todo el servicio.":r.code==="closed"?"El servicio no cabe antes del cierre.":"No se ha podido guardar.")+"</p>";
   });
  };
